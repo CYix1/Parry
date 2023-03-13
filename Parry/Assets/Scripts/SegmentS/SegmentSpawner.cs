@@ -7,17 +7,31 @@ public class SegmentSpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private List<Segment> segments = new();
 
+    #region Start
+
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnSegment), 1, 3);
+        SpawnNext();
     }
+
+    #endregion
+
+    #region public
+
+    public void SpawnNext()
+    {
+        SpawnSegment();
+    }
+
+    #endregion
+
+    #region internal
 
     private void SpawnSegment()
     {
         int randomIndex = GetRandomIndex();
-        Debug.Log("SegmentSpawning: Rand = " + randomIndex);
         Segment segment = segments[randomIndex];
-        
+
         segment.SpawnAt(spawnPoint.position);
     }
 
@@ -25,4 +39,6 @@ public class SegmentSpawner : MonoBehaviour
     {
         return Random.Range(0, segments.Count);
     }
+
+    #endregion
 }
