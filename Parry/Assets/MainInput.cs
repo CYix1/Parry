@@ -31,7 +31,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""name"": ""move"",
                     ""type"": ""Value"",
                     ""id"": ""899c4999-f7eb-4c97-a59a-18e6d8d931a0"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -40,6 +40,15 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""name"": ""jump"",
                     ""type"": ""Button"",
                     ""id"": ""cf12ba0d-5d0a-48d4-b2c1-804660be54ac"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""dodge"",
+                    ""type"": ""Button"",
+                    ""id"": ""94e5466e-57c6-428b-a1ea-fa690869e03d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -75,9 +84,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""3c36410f-6bae-4167-8087-45cec33f5578"",
-                    ""path"": ""2DVector"",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""225d7d96-be20-4693-bc64-ae76e33031bd"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -86,9 +95,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""8eff09b9-1882-4f75-bcbd-189ebf947f3b"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""name"": ""Negative"",
+                    ""id"": ""a827df58-d62f-45b5-b1d5-50b2378da084"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -97,9 +106,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""down"",
-                    ""id"": ""09bc4e5e-508f-49f1-87b6-56c50a13a0fc"",
-                    ""path"": ""<Keyboard>/s"",
+                    ""name"": ""Positive"",
+                    ""id"": ""d8f66431-8c6e-4dbb-89ef-d4e65fa84037"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -108,7 +117,18 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""left"",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""3c36410f-6bae-4167-8087-45cec33f5578"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Negative"",
                     ""id"": ""b778a38e-cbd1-43a3-a11f-c5b17b49d1cf"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
@@ -119,7 +139,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""right"",
+                    ""name"": ""Positive"",
                     ""id"": ""bcff6d73-6e2f-4ed8-bf1c-5cc2901b80f6"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
@@ -133,6 +153,28 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""368133ae-2ab6-4a76-b28f-623703c13deb"",
                     ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2f18c2ec-16b6-4558-9e6d-17928ec70cff"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""840f758b-fff0-4cab-960f-72c1d56cb62b"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -172,6 +214,28 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""action"": ""counter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""90bdc019-4562-4a87-b998-66bc478ccff3"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dodge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5bf146d2-7738-4303-a31b-e03b25c92b8e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dodge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -182,6 +246,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         m_Character = asset.FindActionMap("Character", throwIfNotFound: true);
         m_Character_move = m_Character.FindAction("move", throwIfNotFound: true);
         m_Character_jump = m_Character.FindAction("jump", throwIfNotFound: true);
+        m_Character_dodge = m_Character.FindAction("dodge", throwIfNotFound: true);
         m_Character_parry = m_Character.FindAction("parry", throwIfNotFound: true);
         m_Character_deflect = m_Character.FindAction("deflect", throwIfNotFound: true);
         m_Character_counter = m_Character.FindAction("counter", throwIfNotFound: true);
@@ -248,6 +313,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
     private List<ICharacterActions> m_CharacterActionsCallbackInterfaces = new List<ICharacterActions>();
     private readonly InputAction m_Character_move;
     private readonly InputAction m_Character_jump;
+    private readonly InputAction m_Character_dodge;
     private readonly InputAction m_Character_parry;
     private readonly InputAction m_Character_deflect;
     private readonly InputAction m_Character_counter;
@@ -257,6 +323,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         public CharacterActions(@MainInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @move => m_Wrapper.m_Character_move;
         public InputAction @jump => m_Wrapper.m_Character_jump;
+        public InputAction @dodge => m_Wrapper.m_Character_dodge;
         public InputAction @parry => m_Wrapper.m_Character_parry;
         public InputAction @deflect => m_Wrapper.m_Character_deflect;
         public InputAction @counter => m_Wrapper.m_Character_counter;
@@ -275,6 +342,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @jump.started += instance.OnJump;
             @jump.performed += instance.OnJump;
             @jump.canceled += instance.OnJump;
+            @dodge.started += instance.OnDodge;
+            @dodge.performed += instance.OnDodge;
+            @dodge.canceled += instance.OnDodge;
             @parry.started += instance.OnParry;
             @parry.performed += instance.OnParry;
             @parry.canceled += instance.OnParry;
@@ -294,6 +364,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @jump.started -= instance.OnJump;
             @jump.performed -= instance.OnJump;
             @jump.canceled -= instance.OnJump;
+            @dodge.started -= instance.OnDodge;
+            @dodge.performed -= instance.OnDodge;
+            @dodge.canceled -= instance.OnDodge;
             @parry.started -= instance.OnParry;
             @parry.performed -= instance.OnParry;
             @parry.canceled -= instance.OnParry;
@@ -324,6 +397,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnDodge(InputAction.CallbackContext context);
         void OnParry(InputAction.CallbackContext context);
         void OnDeflect(InputAction.CallbackContext context);
         void OnCounter(InputAction.CallbackContext context);

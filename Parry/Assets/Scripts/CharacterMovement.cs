@@ -2,43 +2,39 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private MainInput input;
-    public float moveSpeed=5f;
-    public float jumpStrength = 10f;
-    void Awake()
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private float jumpStrength = 100f;
+    private Rigidbody body;
+
+    private void Awake()
     {
-        input = new MainInput();
+        body = this.GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    public void OnMove()
     {
-        Vector2 move = input.Character.move.ReadValue<Vector2>();
-        if (move != Vector2.zero)
-        {
-            transform.Translate(move*moveSpeed*Time.deltaTime);
-        }
-
-       /* DONT USE THIS
-         bool pressedJumped = input.Character.jump.IsPressed();
-        if (pressedJumped)
-        {
-            transform.Translate(transform.position+ new Vector3(0,jumpStrength,0) );
-        }
-        */
+        float dir = playerInput.actions.FindAction("Move").ReadValue<float>();
+        transform.position = new Vector3(dir, transform.position.y, transform.position.z);
     }
 
-    private void OnDisable()
+    public void OnJump()
     {
-        
-        input.Disable();
-    }
-    private void OnEnable()
-    {
-        
-        input.Enable();
+        body.AddForce(new Vector3(0f, jumpStrength, 0f));
     }
 
+    public void OnDodge()
+    {
+        StartCoroutine(DodgeEnumerator());
+    }
+
+    IEnumerator DodgeEnumerator()
+    {
+        transform.localScale = new Vector3(1f, 0.5f, 1f);
+        yield return new WaitForSecondsRealtime(1f);
+        transform.localScale = new Vector3(1f, 1f, 1f);
+    }
 }
