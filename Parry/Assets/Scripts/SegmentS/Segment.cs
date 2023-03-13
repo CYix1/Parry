@@ -47,6 +47,6 @@ public class Segment : MonoBehaviour
     {
         var scale = transform.localScale;
         var xScale = scale.x;
-        return new Vector3(xScale, scale.y, scale.z);
+        return new Vector3(xScale, 0, 0);
     }
 }

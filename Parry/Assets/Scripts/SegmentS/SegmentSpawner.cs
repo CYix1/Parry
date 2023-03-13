@@ -28,7 +28,7 @@ public class SegmentSpawner : MonoBehaviour
         SpawnSegment();
     }
 
-    private void SpawnFirst()
+    private void SpawnFirst()  // TODO: always positions 2 and 3 at the same pos
     {
         for (int i = 0; i < numberOfSegmentsAtTheSameTime; i++)
         {
@@ -40,7 +40,6 @@ public class SegmentSpawner : MonoBehaviour
     {
         int randomIndex = GetRandomIndex();
         Segment segment = segments[randomIndex];
-        Debug.Log("random index was " + randomIndex);
 
         var spawnPos = GetSpawnPos();
         segment.SpawnAt(spawnPos);
@@ -60,7 +59,7 @@ public class SegmentSpawner : MonoBehaviour
         if (_lastSegment == null) return spawnPoint.position;
         
         var length = _lastSegment.GetVectorWithXLength();
-        return spawnPoint.position - length;
+        return _lastSegment.transform.position -  length;
     }
 
     #endregion
