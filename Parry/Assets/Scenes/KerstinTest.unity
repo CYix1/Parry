@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 321651309}
   - component: {fileID: 321651314}
   m_Layer: 0
-  m_Name: Segment (1)
+  m_Name: Segment PINK
   m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,8 +534,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321651308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7501354, y: 0.5, z: -12.00024}
-  m_LocalScale: {x: 3.3415, y: 1, z: 1}
+  m_LocalPosition: {x: -13.625274, y: 0.5, z: -10.062703}
+  m_LocalScale: {x: 15, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 567009727}
   - component: {fileID: 567009732}
   m_Layer: 0
-  m_Name: Segment (5)
+  m_Name: Segment GREEN
   m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,8 +662,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567009726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.250205, y: 0.5, z: -12.00024}
-  m_LocalScale: {x: 3.3415, y: 1, z: 1}
+  m_LocalPosition: {x: -13.625274, y: 0.5, z: -11.312728}
+  m_LocalScale: {x: 15, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -715,6 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 279345293}
+  numberOfSegmentsAtTheSameTime: 3
   segments:
   - {fileID: 1108712508}
   - {fileID: 321651309}
@@ -752,7 +753,7 @@ GameObject:
   - component: {fileID: 1108712508}
   - component: {fileID: 1108712513}
   m_Layer: 0
-  m_Name: Segment
+  m_Name: Segment RED
   m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,8 +843,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108712507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.750275, y: 0.5, z: -12.00024}
-  m_LocalScale: {x: 3.3415, y: 1, z: 1}
+  m_LocalPosition: {x: -13.375268, y: 0.5, z: -12.43775}
+  m_LocalScale: {x: 15, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -978,7 +979,7 @@ GameObject:
   - component: {fileID: 1828613006}
   - component: {fileID: 1828613011}
   m_Layer: 0
-  m_Name: Segment (4)
+  m_Name: Segment BLUE
   m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1068,8 +1069,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828613005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2500648, y: 0.5, z: -12.00024}
-  m_LocalScale: {x: 3.3415, y: 1, z: 1}
+  m_LocalPosition: {x: -13.562773, y: 0.5, z: -8.562673}
+  m_LocalScale: {x: 15, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1106,7 +1107,7 @@ GameObject:
   - component: {fileID: 1830082658}
   - component: {fileID: 1830082663}
   m_Layer: 0
-  m_Name: Segment (2)
+  m_Name: Segment WHITE
   m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1196,8 +1197,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830082657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.750416, y: 0.5, z: -12.00024}
-  m_LocalScale: {x: 3.3415, y: 1, z: 1}
+  m_LocalPosition: {x: -13.625274, y: 0.5, z: -15.437809}
+  m_LocalScale: {x: 15, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1376,7 +1377,7 @@ GameObject:
   - component: {fileID: 2058421044}
   - component: {fileID: 2058421049}
   m_Layer: 0
-  m_Name: Segment (3)
+  m_Name: Segment YELLOW
   m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,8 +1467,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058421043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.250345, y: 0.5, z: -12.00024}
-  m_LocalScale: {x: 3.3415, y: 1, z: 1}
+  m_LocalPosition: {x: -13.625274, y: 0.5, z: -13.93778}
+  m_LocalScale: {x: 15, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

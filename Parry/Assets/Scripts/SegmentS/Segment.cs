@@ -27,8 +27,9 @@ public class Segment : MonoBehaviour
 
     public void SpawnAt(Vector3 position)
     {
+        Debug.Log("Spawn " + this.name + " at " + position);
         transform.position = position;
-        StartMoving();
+        //StartMoving();
     }
 
     private void StartMoving()
@@ -40,5 +41,12 @@ public class Segment : MonoBehaviour
     {
         transform.position = _initialPosition;
         _doMove = false;
+    }
+
+    public Vector3 GetVectorWithXLength()
+    {
+        var scale = transform.localScale;
+        var xScale = scale.x;
+        return new Vector3(xScale, scale.y, scale.z);
     }
 }
