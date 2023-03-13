@@ -9,10 +9,8 @@ namespace LevelGeneration
         private void OnTriggerEnter(Collider other)
         {
             if (!HasSegmentTag(other)) return;
-
-            Segment segmentComponent = GetSegmentComponent(other);
-        
-            segmentComponent.Reset();
+            
+            Destroy(other);
             segmentSpawner.SpawnNext();
         }
 

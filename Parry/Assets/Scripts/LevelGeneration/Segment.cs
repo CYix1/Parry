@@ -19,24 +19,18 @@ namespace LevelGeneration
         void Update()
         {
             if (!_doMove) return;
-
+            
             var pos = transform.position;
             transform.position = new Vector3(pos.x + speed, pos.y, pos.z);
         }
 
         #endregion
 
-        public void SpawnAt(Vector3 position)
-        {
-            Debug.Log("Spawn " + this.name + " at " + position);
-            transform.position = position;
-            StartMoving();
-        }
-
-        private void StartMoving()
+        public void StartMoving()
         {
             _doMove = true;
         }
+
 
         public void Reset()
         {
