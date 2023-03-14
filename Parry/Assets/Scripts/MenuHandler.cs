@@ -7,20 +7,36 @@ using UnityEngine.UI;
 public class MenuHandler : MonoBehaviour
 {
     public GameObject optionPanel;
+    
+    
+    public void SetMasterVolume(float sliderValue) => SetLevel("MasterVolume", sliderValue);
+    public void SetEffectVolume(float sliderValue) => SetLevel("effectVolume", sliderValue);
+    public void SetBackgroundVolume(float sliderValue) => SetLevel("backgroundVolume", sliderValue);
 
-    public void UpdateValues()
+    private void SetLevel(string select, float sliderValue)
     {
-        Slider slider = optionPanel.GetComponentInChildren<Slider>();
         Toggle toggle = optionPanel.GetComponentInChildren<Toggle>();
 
         if (toggle.isOn)
             AudioManager.instance.masterVolume = 0;
         else
         {
-            AudioManager.instance.masterVolume = slider.value;
+            AudioManager.instance.masterVolume = sliderValue;
+        }
+        AudioManager.instance.mixer.SetFloat(select, Mathf.Log10(sliderValue) * 20);
+        switch (select)
+        {
+            case "effectVolume":
+                AudioManager.instance.soundEffectVolume = sliderValue;
+                return;
+            case "backgroundVolume":
+                AudioManager.instance.backgroundVolume = sliderValue;
+                return;
+            default:
+                AudioManager.instance.masterVolume = sliderValue;
+                return;
         }
     }
-
     public void Exitgame()
     {
             
