@@ -12,28 +12,29 @@ public class CharacterMovement : MonoBehaviour
     }
 
     private Rigidbody body;
-    private PlayerInput playerInput;
     private Activity activity;
     private float lanePos;
 
     [SerializeField] private float jumpStrength = 5f;
-    [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float moveSpeed = 10f;
+
+    private readonly float minMovePos = -3f;
+    private readonly float maxMovePos = 3f;
 
     private void Awake()
     {
         body = this.GetComponent<Rigidbody>();
-        playerInput = this.GetComponent<PlayerInput>();
     }
 
     private void FixedUpdate()
     {
         float curPos = transform.position.z;
-        if(curPos != lanePos)
+        if (curPos != lanePos)
         {
             float dir = Mathf.Sign(lanePos - curPos);
             float maxMove = moveSpeed * dir * Time.fixedDeltaTime;
-            float newPos = Mathf.Clamp(curPos + maxMove, -3f, 3f);
-            if(lanePos == 0 && Mathf.Sign(newPos) != Mathf.Sign(curPos))
+            float newPos = Mathf.Clamp(curPos + maxMove, minMovePos, maxMovePos);
+            if (lanePos == 0 && Mathf.Sign(newPos) != Mathf.Sign(curPos))
             {
                 newPos = 0;
             }
@@ -43,12 +44,15 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        lanePos = playerInput.actions.FindAction("Move").ReadValue<float>();
+        if (context.performed)
+        {
+            lanePos = Mathf.Clamp(lanePos + context.ReadValue<float>(), minMovePos, maxMovePos);
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started && activity == Activity.RUNNING)
+        if (context.performed && activity == Activity.RUNNING)
         {
             StartCoroutine(JumpEnumerator());
         }
@@ -67,7 +71,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnDodge(InputAction.CallbackContext context)
     {
-        if (context.started && activity == Activity.RUNNING)
+        if (context.performed && activity == Activity.RUNNING)
         {
             StartCoroutine(DodgeEnumerator());
         }
