@@ -23,7 +23,7 @@ namespace LevelGeneration
         {
             var xPos = transform.position.x;
             var speed = _reversed ? -Speed : Speed;
-            return xPos + speed;
+            return xPos + speed * Time.deltaTime;
         }
 
         public void ReverseDirection()
