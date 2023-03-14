@@ -32,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
         {
             float dir = Mathf.Sign(lanePos - curPos);
             float maxMove = moveSpeed * dir * Time.fixedDeltaTime;
-            float newPos = Mathf.Clamp(curPos + maxMove, -1f, 1f);
+            float newPos = Mathf.Clamp(curPos + maxMove, -3f, 3f);
             if(lanePos == 0 && Mathf.Sign(newPos) != Mathf.Sign(curPos))
             {
                 newPos = 0;
@@ -43,7 +43,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        lanePos = playerInput.actions.FindAction("Move").ReadValue<float>()*2;
+        lanePos = playerInput.actions.FindAction("Move").ReadValue<float>();
     }
 
     public void OnJump(InputAction.CallbackContext context)

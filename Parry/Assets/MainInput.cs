@@ -86,7 +86,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""225d7d96-be20-4693-bc64-ae76e33031bd"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""1DAxis(minValue=-3,maxValue=3)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -119,7 +119,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""3c36410f-6bae-4167-8087-45cec33f5578"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""1DAxis(minValue=-3,maxValue=3)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
