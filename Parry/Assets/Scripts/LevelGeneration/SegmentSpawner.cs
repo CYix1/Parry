@@ -5,12 +5,10 @@ namespace LevelGeneration
 {
     public class SegmentSpawner : MonoBehaviour
     {
-        // TODO: use instantiate() instead of object pooling, so the same tile cannot be transformed by itself
-        // TODO: Turn Segments into prefabs 
-
         [Header("Spawning")] [SerializeField] private Transform spawnPoint;
         [SerializeField] private int firstGroupCount = 3;
         [Header("Segments")] [SerializeField] private List<Transform> segments = new();
+        [SerializeField] private float segmentSpeed = 1f;
 
         private Transform _lastSegment;
         private System.Random _rand;
@@ -20,16 +18,19 @@ namespace LevelGeneration
         private void Start()
         {
             _rand = new System.Random();
+            SetSegmentSpeed();
             SpawnFirstGroup();
         }
 
         #endregion
 
+        #region Spawning
 
         public void SpawnNext()
         {
             SpawnSegment();
         }
+
 
         private void SpawnFirstGroup()
         {
@@ -47,6 +48,23 @@ namespace LevelGeneration
             var spawnPos = GetSpawnPos();
             _lastSegment = Instantiate(segment, spawnPos, Quaternion.identity);
         }
+
+        #endregion
+
+        #region Speed
+
+        private void SetSegmentSpeed()
+        {
+            Segment.Speed = segmentSpeed;
+        }
+        
+        private void Accelerate()
+        {
+            // TODO: speed over time erhöhen
+        }
+
+        #endregion
+
 
         #region Helpers
 

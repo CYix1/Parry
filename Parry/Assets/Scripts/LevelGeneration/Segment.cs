@@ -4,7 +4,7 @@ namespace LevelGeneration
 {
     public class Segment : MonoBehaviour
     {
-        [SerializeField] private float speed = 1f;
+        public static float Speed = 0.05f;
         private Vector3 _initialPosition;
         private bool _doMove;
 
@@ -21,7 +21,7 @@ namespace LevelGeneration
             if (!_doMove) return;
 
             var pos = transform.position;
-            transform.position = new Vector3(pos.x + speed, pos.y, pos.z);
+            transform.position = new Vector3(pos.x + Speed, pos.y, pos.z);
         }
 
         #endregion

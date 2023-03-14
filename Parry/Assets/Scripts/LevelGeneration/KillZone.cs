@@ -18,10 +18,5 @@ namespace LevelGeneration
         {
             return other.CompareTag("Segment");
         }
-
-        private Segment GetSegmentComponent(Component other)
-        {
-            return other.GetComponent<Segment>();
-        }
     }
 }
