@@ -43,7 +43,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        lanePos = playerInput.actions.FindAction("Move").ReadValue<float>();
+        lanePos = playerInput.actions.FindAction("Move").ReadValue<float>()*2;
     }
 
     public void OnJump(InputAction.CallbackContext context)
