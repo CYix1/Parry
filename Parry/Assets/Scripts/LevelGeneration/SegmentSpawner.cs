@@ -55,7 +55,7 @@ namespace LevelGeneration
 
         private void SetSegmentSpeed()
         {
-            Segment.Speed = segmentSpeed;
+            MovingObject.Speed = segmentSpeed;
         }
         
         private void Accelerate()
