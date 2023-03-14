@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: c98a6b8b1866e954898e12eb0b6f4d54
+  - enabled: 1
+    path: Assets/Scenes/Helga.unity
+    guid: 74873045c6f4bf04483c51e3df5dd35a
+  - enabled: 1
+    path: Assets/Scenes/KerstinTest.unity
+    guid: fc3f7c39226a85d4fb94366133a4498b
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: 37acf7d14e1a7264893f25a67b7b4200
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
