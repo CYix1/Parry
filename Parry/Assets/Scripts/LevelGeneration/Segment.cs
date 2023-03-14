@@ -12,37 +12,24 @@ namespace LevelGeneration
 
         private void Start()
         {
-            _doMove = false;
+            _doMove = true;
             _initialPosition = transform.position;
         }
 
         void Update()
         {
             if (!_doMove) return;
-            
+
             var pos = transform.position;
             transform.position = new Vector3(pos.x + speed, pos.y, pos.z);
         }
 
         #endregion
 
-        public void StartMoving()
-        {
-            _doMove = true;
-        }
-
-
         public void Reset()
         {
             transform.position = _initialPosition;
             _doMove = false;
-        }
-
-        public Vector3 GetVectorWithXLength()
-        {
-            var scale = transform.localScale;
-            var xScale = scale.x;
-            return new Vector3(xScale, 0, 0);
         }
     }
 }

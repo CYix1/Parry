@@ -6,11 +6,11 @@ namespace LevelGeneration
     {
         [SerializeField] private SegmentSpawner segmentSpawner;
     
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerExit(Collider other)
         {
             if (!HasSegmentTag(other)) return;
             
-            Destroy(other);
+            Destroy(other.gameObject);
             segmentSpawner.SpawnNext();
         }
 

@@ -5,15 +5,12 @@ namespace LevelGeneration
 {
     public class SegmentSpawner : MonoBehaviour
     {
-        
         // TODO: use instantiate() instead of object pooling, so the same tile cannot be transformed by itself
         // TODO: Turn Segments into prefabs 
-        
-        [Header("Spawning")]
-        [SerializeField] private Transform spawnPoint;
+
+        [Header("Spawning")] [SerializeField] private Transform spawnPoint;
         [SerializeField] private int firstGroupCount = 3;
-        [Header("Segments")]
-        [SerializeField] private List<Transform> segments = new();
+        [Header("Segments")] [SerializeField] private List<Transform> segments = new();
 
         private Transform _lastSegment;
         private System.Random _rand;
@@ -28,7 +25,7 @@ namespace LevelGeneration
 
         #endregion
 
-    
+
         public void SpawnNext()
         {
             SpawnSegment();
@@ -48,12 +45,7 @@ namespace LevelGeneration
             Transform segment = segments[randomIndex];
 
             var spawnPos = GetSpawnPos();
-            var copy =  Instantiate(segment, spawnPos, Quaternion.identity);
-
-            var segmentComp = copy.transform.GetComponent<Segment>();
-            segmentComp.StartMoving();
-        
-            _lastSegment = copy;
+            _lastSegment = Instantiate(segment, spawnPos, Quaternion.identity);
         }
 
         #region Helpers
@@ -66,9 +58,9 @@ namespace LevelGeneration
         private Vector3 GetSpawnPos()
         {
             if (_lastSegment == null) return spawnPoint.position;
-        
+
             var length = _lastSegment.localScale.x;
-            var vec = new Vector3(length, 0,0);
+            var vec = new Vector3(length, 0, 0);
             return _lastSegment.transform.position - vec;
         }
 
