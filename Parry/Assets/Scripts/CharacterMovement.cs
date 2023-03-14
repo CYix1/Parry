@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour
     private float lanePos;
 
     [SerializeField] private float jumpStrength = 5f;
-    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float moveSpeed = 8f;
 
     private void Awake()
     {
@@ -30,7 +30,14 @@ public class CharacterMovement : MonoBehaviour
         float curPos = transform.position.z;
         if(curPos != lanePos)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, lanePos);
+            float dir = Mathf.Sign(lanePos - curPos);
+            float maxMove = moveSpeed * dir * Time.fixedDeltaTime;
+            float newPos = Mathf.Clamp(curPos + maxMove, -1f, 1f);
+            if(lanePos == 0 && Mathf.Sign(newPos) != Mathf.Sign(curPos))
+            {
+                newPos = 0;
+            }
+            transform.position = new Vector3(transform.position.x, transform.position.y, newPos);
         }
     }
 
