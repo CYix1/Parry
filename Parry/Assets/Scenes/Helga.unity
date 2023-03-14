@@ -444,8 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6919f6835230f4eb48ff5cad1ad3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 1162589477}
-  jumpStrength: 100
+  jumpStrength: 5
+  moveSpeed: 1
 --- !u!114 &1162589477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1162589476}
         m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
         m_MethodName: OnMove
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -492,7 +492,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1162589476}
         m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
         m_MethodName: OnJump
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -508,7 +508,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1162589476}
         m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
         m_MethodName: OnDodge
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

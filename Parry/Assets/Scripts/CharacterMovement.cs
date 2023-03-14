@@ -6,35 +6,72 @@ using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
-    [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private float jumpStrength = 100f;
+    enum Activity
+    {
+        RUNNING, JUMPING, DODGING
+    }
+
     private Rigidbody body;
+    private PlayerInput playerInput;
+    private Activity activity;
+    private float lanePos;
+
+    [SerializeField] private float jumpStrength = 5f;
+    [SerializeField] private float moveSpeed = 10f;
 
     private void Awake()
     {
         body = this.GetComponent<Rigidbody>();
+        playerInput = this.GetComponent<PlayerInput>();
     }
 
-    public void OnMove()
+    private void FixedUpdate()
     {
-        float dir = playerInput.actions.FindAction("Move").ReadValue<float>();
-        transform.position = new Vector3(dir, transform.position.y, transform.position.z);
+        float curPos = transform.position.x;
+        if(curPos != lanePos)
+        {
+            transform.position = new Vector3(lanePos, transform.position.y, transform.position.z);
+        }
     }
 
-    public void OnJump()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        body.AddForce(new Vector3(0f, jumpStrength, 0f));
+        lanePos = playerInput.actions.FindAction("Move").ReadValue<float>();
     }
 
-    public void OnDodge()
+    public void OnJump(InputAction.CallbackContext context)
     {
-        StartCoroutine(DodgeEnumerator());
+        if (context.started && activity == Activity.RUNNING)
+        {
+            StartCoroutine(JumpEnumerator());
+        }
+    }
+
+    IEnumerator JumpEnumerator()
+    {
+        activity = Activity.JUMPING;
+        body.velocity += new Vector3(0f, jumpStrength, 0f);
+        while (body.velocity.y != 0 || body.position.y != 1)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        activity = Activity.RUNNING;
+    }
+
+    public void OnDodge(InputAction.CallbackContext context)
+    {
+        if (context.started && activity == Activity.RUNNING)
+        {
+            StartCoroutine(DodgeEnumerator());
+        }
     }
 
     IEnumerator DodgeEnumerator()
     {
+        activity = Activity.DODGING;
         transform.localScale = new Vector3(1f, 0.5f, 1f);
         yield return new WaitForSecondsRealtime(1f);
         transform.localScale = new Vector3(1f, 1f, 1f);
+        activity = Activity.RUNNING;
     }
 }
