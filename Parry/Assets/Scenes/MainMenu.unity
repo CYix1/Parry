@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076193512}
+      - m_Target: {fileID: 949020946}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: SetMasterVolume
         m_Mode: 0
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076193512}
+      - m_Target: {fileID: 949020946}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: SetBackgroundVolume
         m_Mode: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076193512}
+      - m_Target: {fileID: 949020946}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: Exitgame
         m_Mode: 1
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076193512}
+      - m_Target: {fileID: 949020946}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: triggerOptionPanel
         m_Mode: 1
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076193512}
+      - m_Target: {fileID: 949020946}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -1440,6 +1440,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889938854}
   m_CullTransparentMesh: 1
+--- !u!1 &949020945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949020947}
+  - component: {fileID: 949020946}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &949020946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949020945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b746d07053754d45b79cc37976331ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionPanel: {fileID: 984706485}
+--- !u!4 &949020947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949020945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.9883895, y: -0.144387, z: -2.9365838}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &984706485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,9 +1691,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076193513}
-  - component: {fileID: 1076193512}
   - component: {fileID: 1076193515}
   - component: {fileID: 1076193514}
+  - component: {fileID: 1076193516}
   m_Layer: 0
   m_Name: Scripthandler
   m_TagString: Untagged
@@ -1656,19 +1701,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1076193512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076193511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b746d07053754d45b79cc37976331ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionPanel: {fileID: 984706485}
 --- !u!4 &1076193513
 Transform:
   m_ObjectHideFlags: 0
@@ -1888,6 +1920,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1076193516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076193511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237893ca12c6a8b4285a93c4d30237d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  coins: 0
 --- !u!1 &1088053844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2215,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076193512}
+      - m_Target: {fileID: 949020946}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: SetEffectVolume
         m_Mode: 0
