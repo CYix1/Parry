@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 [RequireComponent(typeof(AudioSource))]
@@ -8,7 +9,11 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public  AudioSource _source;
     public static AudioManager instance;
+    public AudioMixer mixer;
+
     public float masterVolume;
+    public float soundEffectVolume;
+    public float backgroundVolume;
     private void Awake()
     {
         if (instance == null)
