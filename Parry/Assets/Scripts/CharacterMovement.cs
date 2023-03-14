@@ -27,10 +27,10 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float curPos = transform.position.x;
+        float curPos = transform.position.z;
         if(curPos != lanePos)
         {
-            transform.position = new Vector3(lanePos, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, lanePos);
         }
     }
 
