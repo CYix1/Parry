@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 279345292}
   - component: {fileID: 279345291}
   - component: {fileID: 279345290}
+  - component: {fileID: 279345294}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -391,13 +392,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279345289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -22.50045, y: 0.50001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &279345294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279345289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821053afe036c804791367e97de70b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1092050525
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +449,7 @@ MonoBehaviour:
   - {fileID: 5074501140742335984, guid: ee8e2d53071eda44cbcaaebfeaeeec02, type: 3}
   - {fileID: 1115172856311827353, guid: c9af95d7453be2a41988c85d49aabea6, type: 3}
   - {fileID: 8449218438702687681, guid: c48a1774de7673e4c9b357c91d009f81, type: 3}
-  segmentSpeed: 0.05
+  segmentSpeed: 10
 --- !u!4 &1092050527
 Transform:
   m_ObjectHideFlags: 0
@@ -543,7 +556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202987130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.50001, z: 0}
   m_LocalScale: {x: 4.599275, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -594,6 +607,7 @@ GameObject:
   - component: {fileID: 1847672171}
   - component: {fileID: 1847672170}
   - component: {fileID: 1847672174}
+  - component: {fileID: 1847672175}
   m_Layer: 0
   m_Name: KillPoint
   m_TagString: Untagged
@@ -692,6 +706,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segmentSpawner: {fileID: 1092050526}
+--- !u!114 &1847672175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847672169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821053afe036c804791367e97de70b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1893082085
 GameObject:
   m_ObjectHideFlags: 0
