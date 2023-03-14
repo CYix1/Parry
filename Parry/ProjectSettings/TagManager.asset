@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Segment
   - Obstacle
+  - Deflectable
   layers:
   - Default
   - TransparentFX
