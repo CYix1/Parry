@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,13 @@ using UnityEngine.UI;
 public class MenuHandler : MonoBehaviour
 {
     public GameObject optionPanel;
-    
-    
+
+    private void Start()
+    {
+        Debug.Log("awdno");
+        GameData.instance.health = 3;
+    }
+
     public void SetMasterVolume(float sliderValue) => SetLevel("MasterVolume", sliderValue);
     public void SetEffectVolume(float sliderValue) => SetLevel("effectVolume", sliderValue);
     public void SetBackgroundVolume(float sliderValue) => SetLevel("backgroundVolume", sliderValue);
@@ -50,6 +56,7 @@ public class MenuHandler : MonoBehaviour
 
     public void triggerOptionPanel()
     {
+        Debug.Log("aduivus");
         optionPanel.SetActive(!optionPanel.activeSelf);
             
     }
