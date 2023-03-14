@@ -45,7 +45,7 @@ namespace LevelGeneration
             int randomIndex = GetRandomIndex();
             Transform segment = segments[randomIndex];
 
-            var spawnPos = GetSpawnPos();
+            var spawnPos = GetSpawnPos(segment);
             _lastSegment = Instantiate(segment, spawnPos, Quaternion.identity);
         }
 
@@ -60,7 +60,7 @@ namespace LevelGeneration
         
         private void Accelerate()
         {
-            // TODO: speed over time erhöhen
+            // TODO: increase speed over time
         }
 
         #endregion
@@ -73,13 +73,26 @@ namespace LevelGeneration
             return _rand.Next(segments.Count);
         }
 
-        private Vector3 GetSpawnPos()
+        private Vector3 GetSpawnPos(Transform newSegment)
         {
+            // instantiate the first segment at specified spawnPoint
             if (_lastSegment == null) return spawnPoint.position;
 
-            var length = _lastSegment.localScale.x;
-            var vec = new Vector3(length, 0, 0);
-            return _lastSegment.transform.position - vec;
+            // calculate the distance between old and new segments' centers
+            var lastSegmentLength = GetCenterToEdge(_lastSegment);
+            var newSegmentLength = GetCenterToEdge(newSegment);
+            var distanceBetweenCenters = lastSegmentLength + newSegmentLength;
+            
+            // subtract as we move towards positive X -> spawn behind last segment
+            return _lastSegment.transform.position - distanceBetweenCenters;
+        }
+
+        private Vector3 GetCenterToEdge(Transform transform)
+        {
+            var xScale = transform.localScale.x;
+            // divide by 2 as we want the distance between center and edge and not whole scale
+            xScale *= 0.5f;
+            return new Vector3(xScale, 0, 0);
         }
 
         #endregion

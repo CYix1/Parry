@@ -467,6 +467,7 @@ MonoBehaviour:
   - {fileID: 5074501140742335984, guid: ee8e2d53071eda44cbcaaebfeaeeec02, type: 3}
   - {fileID: 1115172856311827353, guid: c9af95d7453be2a41988c85d49aabea6, type: 3}
   - {fileID: 8449218438702687681, guid: c48a1774de7673e4c9b357c91d009f81, type: 3}
+  - {fileID: 7330942168026915780, guid: 6a62d64927f99944e8ba8dae93737e39, type: 3}
   segmentSpeed: 0.05
 --- !u!4 &1092050527
 Transform:
