@@ -7,7 +7,7 @@ public class ObstacleScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Obstacle"))
+        if (other.CompareTag("Obstacle") || other.CompareTag("Bullet"))
         {
             GameData.instance.health--;
             Debug.Log("Lost Health");
