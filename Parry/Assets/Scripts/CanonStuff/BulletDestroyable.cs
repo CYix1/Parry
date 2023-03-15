@@ -17,7 +17,7 @@ namespace CanonStuff
             Destroy(gameObject);
             Destroy(other.gameObject);
             
-            // TODO: explosion effect
+            // TODO: start explosion
 
         }
 
