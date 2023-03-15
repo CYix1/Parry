@@ -1,0 +1,392 @@
+newmtl A_syousa
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka A_syousa.png
+map_Kd A_syousa.png
+map_d A_syousa.png
+newmtl body
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka body.png
+map_Kd body.png
+map_d body.png
+newmtl lambert22
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert22.png
+map_Kd lambert22.png
+map_d lambert22.png
+newmtl lambert23
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert23.png
+map_Kd lambert23.png
+map_d lambert23.png
+newmtl lambert24
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert24.png
+map_Kd lambert24.png
+map_d lambert24.png
+newmtl lambert25
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert25.png
+map_Kd lambert25.png
+map_d lambert25.png
+newmtl lambert26
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert26.png
+map_Kd lambert26.png
+map_d lambert26.png
+newmtl lambert27
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert27.png
+map_Kd lambert27.png
+map_d lambert27.png
+newmtl lambert28
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert28.png
+map_Kd lambert28.png
+map_d lambert28.png
+newmtl lambert29
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert29.png
+map_Kd lambert29.png
+map_d lambert29.png
+newmtl lambert30
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert30.png
+map_Kd lambert30.png
+map_d lambert30.png
+newmtl lambert36
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert36.png
+map_Kd lambert36.png
+map_d lambert36.png
+newmtl lambert37
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert37.png
+map_Kd lambert37.png
+map_d lambert37.png
+newmtl lambert38
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert38.png
+map_Kd lambert38.png
+map_d lambert38.png
+newmtl lambert39
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert39.png
+map_Kd lambert39.png
+map_d lambert39.png
+newmtl lambert40
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert40.png
+map_Kd lambert40.png
+map_d lambert40.png
+newmtl lambert41
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert41.png
+map_Kd lambert41.png
+map_d lambert41.png
+newmtl lambert415
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert415.png
+map_Kd lambert415.png
+map_d lambert415.png
+newmtl lambert417
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert417.png
+map_Kd lambert417.png
+map_d lambert417.png
+newmtl lambert419
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert419.png
+map_Kd lambert419.png
+map_d lambert419.png
+newmtl lambert420
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert420.png
+map_Kd lambert420.png
+map_d lambert420.png
+newmtl lambert421
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert421.png
+map_Kd lambert421.png
+map_d lambert421.png
+newmtl lambert422
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert422.png
+map_Kd lambert422.png
+map_d lambert422.png
+newmtl lambert423
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert423.png
+map_Kd lambert423.png
+map_d lambert423.png
+newmtl lambert424
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert424.png
+map_Kd lambert424.png
+map_d lambert424.png
+newmtl lambert427
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert427.png
+map_Kd lambert427.png
+map_d lambert427.png
+newmtl lambert428
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert428.png
+map_Kd lambert428.png
+map_d lambert428.png
+newmtl lambert429
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert429.png
+map_Kd lambert429.png
+map_d lambert429.png
+newmtl lambert430
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert430.png
+map_Kd lambert430.png
+map_d lambert430.png
+newmtl lambert432
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert432.png
+map_Kd lambert432.png
+map_d lambert432.png
+newmtl lambert433
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert433.png
+map_Kd lambert433.png
+map_d lambert433.png
+newmtl lambert434
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert434.png
+map_Kd lambert434.png
+map_d lambert434.png
+newmtl lambert435
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert435.png
+map_Kd lambert435.png
+map_d lambert435.png
+newmtl lambert436
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert436.png
+map_Kd lambert436.png
+map_d lambert436.png
+newmtl lambert437
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert437.png
+map_Kd lambert437.png
+map_d lambert437.png
+newmtl lambert438
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert438.png
+map_Kd lambert438.png
+map_d lambert438.png
+newmtl lambert441
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert441.png
+map_Kd lambert441.png
+map_d lambert441.png
+newmtl lambert442
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert442.png
+map_Kd lambert442.png
+map_d lambert442.png
+newmtl lambert443
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert443.png
+map_Kd lambert443.png
+map_d lambert443.png
+newmtl lambert444
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert444.png
+map_Kd lambert444.png
+map_d lambert444.png
+newmtl lambert445
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert445.png
+map_Kd lambert445.png
+map_d lambert445.png
+newmtl lambert446
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert446.png
+map_Kd lambert446.png
+map_d lambert446.png
+newmtl lambert447
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert447.png
+map_Kd lambert447.png
+map_d lambert447.png
+newmtl line
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka line.png
+map_Kd line.png
+map_d line.png
+newmtl line_02
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka line_02.png
+map_Kd line_02.png
+map_d line_02.png
+newmtl perry_handle
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka perry_handle.png
+map_Kd perry_handle.png
+map_d perry_handle.png
+newmtl perry_light
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka perry_light.png
+map_Kd perry_light.png
+map_d perry_light.png
+newmtl perry_un
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka perry_un.png
+map_Kd perry_un.png
+map_d perry_un.png
+newmtl seet
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka seet.png
+map_Kd seet.png
+map_d seet.png

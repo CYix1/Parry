@@ -233,13 +233,15 @@ MonoBehaviour:
   spawnPoint: {fileID: 1293678754}
   firstGroupCount: 4
   segments:
-  - {fileID: 3339518661912284418, guid: 9cb3f6eba540ff241964ab7d8f99cddd, type: 3}
-  - {fileID: 3376083784667900399, guid: 44f2a97971538de4496994d5f6a7836b, type: 3}
-  - {fileID: 2089150725029445169, guid: 2e9ae076879763d4eac54267340be8ae, type: 3}
-  - {fileID: 5074501140742335984, guid: ee8e2d53071eda44cbcaaebfeaeeec02, type: 3}
-  - {fileID: 1115172856311827353, guid: c9af95d7453be2a41988c85d49aabea6, type: 3}
-  - {fileID: 8449218438702687681, guid: c48a1774de7673e4c9b357c91d009f81, type: 3}
+  - {fileID: 3339518661912284446, guid: 9cb3f6eba540ff241964ab7d8f99cddd, type: 3}
+  - {fileID: 3376083784667900307, guid: 44f2a97971538de4496994d5f6a7836b, type: 3}
+  - {fileID: 2089150725029445165, guid: 2e9ae076879763d4eac54267340be8ae, type: 3}
+  - {fileID: 5074501140742335884, guid: ee8e2d53071eda44cbcaaebfeaeeec02, type: 3}
+  - {fileID: 1115172856311827357, guid: c9af95d7453be2a41988c85d49aabea6, type: 3}
+  - {fileID: 8449218438702687693, guid: c48a1774de7673e4c9b357c91d009f81, type: 3}
+  fistSegment: {fileID: 8449218438702687693, guid: 448daf06836d9d14ea8dfb0ec0d0e342, type: 3}
   segmentSpeed: 8
+  intermediatePlaceHolder: {fileID: 2695847513353331343, guid: a2f4fe1a13bd7b449a3f8b60d710bb04, type: 3}
 --- !u!4 &252049316
 Transform:
   m_ObjectHideFlags: 0
@@ -300,7 +302,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658623057}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

@@ -1,0 +1,48 @@
+newmtl _lambert19
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka _lambert19.png
+map_Kd _lambert19.png
+map_d _lambert19.png
+newmtl lambert116
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert116.png
+map_Kd lambert116.png
+map_d lambert116.png
+newmtl lambert16
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert16.png
+map_Kd lambert16.png
+map_d lambert16.png
+newmtl lambert18
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert18.png
+map_Kd lambert18.png
+map_d lambert18.png
+newmtl lambert22
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert22.png
+map_Kd lambert22.png
+map_d lambert22.png
+newmtl lambert23
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 0.516129
+Tr 0.516129
+map_Ka lambert23.png
+map_Kd lambert23.png
+map_d lambert23.png
