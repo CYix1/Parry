@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotInterval: 0.6
+  shotSpeed: 100
   bullet: {fileID: 2588207573174128189, guid: 7ef89edcdc391b749b023721b253cb6e, type: 3}
 --- !u!114 &5385583561642232531
 MonoBehaviour:

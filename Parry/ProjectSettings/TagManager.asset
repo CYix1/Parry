@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Segment
   - Obstacle
-  - Deflectable
+  - Bullet
+  - Canon
   layers:
   - Default
   - TransparentFX

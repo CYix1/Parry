@@ -13,6 +13,6 @@ public class Deflect : MonoBehaviour
 
     private bool CanBeDeflected(Collider other)
     {
-        return other.CompareTag("Deflectable");
+        return other.CompareTag("Bullet");
     }
 }

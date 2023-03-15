@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace LevelGeneration
@@ -8,7 +9,7 @@ namespace LevelGeneration
         [Header("Spawning")] [SerializeField] private Transform spawnPoint;
         [SerializeField] private int firstGroupCount = 3;
         [Header("Segments")] [SerializeField] private List<Transform> segments = new();
-        [SerializeField] private float segmentSpeed = 1f;
+        [SerializeField] private float segmentSpeed = 10f;
 
         private Transform _lastSegment;
         private System.Random _rand;
@@ -18,7 +19,6 @@ namespace LevelGeneration
         private void Start()
         {
             _rand = new System.Random();
-            SetSegmentSpeed();
             SpawnFirstGroup();
         }
 
@@ -47,17 +47,16 @@ namespace LevelGeneration
 
             var spawnPos = GetSpawnPos(segment);
             _lastSegment = Instantiate(segment, spawnPos, Quaternion.identity);
+
+            // set speed for all spawned segments
+            var segComponent = _lastSegment.GetComponent<MovingObject>();
+            segComponent.SetSpeed(segmentSpeed);
         }
 
         #endregion
 
         #region Speed
 
-        private void SetSegmentSpeed()
-        {
-            MovingObject.Speed = segmentSpeed;
-        }
-        
         private void Accelerate()
         {
             // TODO: increase speed over time
@@ -70,6 +69,8 @@ namespace LevelGeneration
 
         private int GetRandomIndex()
         {
+            // segments.Count as it is used to get a random segment from the list
+            // Next(x) returns a random value in [0,x[
             return _rand.Next(segments.Count);
         }
 
@@ -82,7 +83,7 @@ namespace LevelGeneration
             var lastSegmentLength = GetCenterToEdge(_lastSegment);
             var newSegmentLength = GetCenterToEdge(newSegment);
             var distanceBetweenCenters = lastSegmentLength + newSegmentLength;
-            
+
             // subtract as we move towards positive X -> spawn behind last segment
             return _lastSegment.transform.position - distanceBetweenCenters;
         }
