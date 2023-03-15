@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d28007a92bd4f3fbb35b314e3ed3b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 50
+  moveDistance: 200
 --- !u!54 &7878283351639231189
 Rigidbody:
   m_ObjectHideFlags: 0

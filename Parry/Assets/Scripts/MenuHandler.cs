@@ -8,10 +8,30 @@ using UnityEngine.UI;
 public class MenuHandler : MonoBehaviour
 {
     public GameObject optionPanel;
+    private MainInput input;
+    void Awake()
+    {
+        input = new MainInput();
+    }
 
     private void Start()
     {
         GameData.instance.health = 3;
+    }
+    private void Update()
+    {
+        if (input.Character.esc.WasPerformedThisFrame())
+        {
+            
+            Resume();
+        }
+    }
+
+    public void Resume()
+    {
+        triggerOptionPanel();
+        Time.timeScale = optionPanel.activeSelf ? 0 : 1;
+        Debug.Log("RESUME");
     }
 
     public void SetMasterVolume(float sliderValue) => SetLevel("MasterVolume", sliderValue);
@@ -58,4 +78,14 @@ public class MenuHandler : MonoBehaviour
         optionPanel.SetActive(!optionPanel.activeSelf);
             
     }
+    private void OnDisable()
+    {
+        
+        input.Disable();
+    }
+    private void OnEnable()
+    {
+        
+        input.Enable();
+    }    
 }

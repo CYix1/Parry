@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
+    [SerializeField] private GameObject PerryModel;
+    [SerializeField] private GameObject dodgePerryModel;
+
     enum Activity
     {
         RUNNING, JUMPING, DODGING
@@ -73,6 +76,8 @@ public class CharacterMovement : MonoBehaviour
     {
         if (context.performed && activity == Activity.RUNNING)
         {
+          
+            
             StartCoroutine(DodgeEnumerator());
         }
     }
@@ -80,9 +85,13 @@ public class CharacterMovement : MonoBehaviour
     IEnumerator DodgeEnumerator()
     {
         activity = Activity.DODGING;
-        transform.localScale = new Vector3(1f, 0.5f, 1f);
+        transform.localScale = new Vector3(1f, 0.5f, 1f); 
+        PerryModel.SetActive(false);
+        dodgePerryModel.SetActive(true);
         yield return new WaitForSecondsRealtime(1f);
         transform.localScale = new Vector3(1f, 1f, 1f);
+        PerryModel.SetActive(true);
+        dodgePerryModel.SetActive(false);
         activity = Activity.RUNNING;
     }
 }
