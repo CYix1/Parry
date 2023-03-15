@@ -31,6 +31,11 @@ namespace LevelGeneration
             _reversed = !_reversed;
         }
 
+        public bool WasReversed()
+        {
+            return _reversed;
+        }
+
         public void SetSpeed(float speed)
         {
             _speed = speed;

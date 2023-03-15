@@ -572,5 +572,9 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Canon
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 071461f2289a9754ab5df30a278e6d41, type: 3}
