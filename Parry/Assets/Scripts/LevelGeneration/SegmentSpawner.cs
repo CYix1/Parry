@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace LevelGeneration
 {
@@ -11,9 +13,21 @@ namespace LevelGeneration
         [SerializeField] private MovingObject fistSegment;
         [SerializeField] private float segmentSpeed = 10f;
         [SerializeField] private MovingObject intermediatePlaceHolder;
-
+        [Header("")]
         private Transform _lastSegment;
         private System.Random _rand;
+        
+        //sry kerstin ich zerstöre dein script ups ~ Yixi
+                  
+       
+        
+        [Header("Decoration Models")]
+        public GameObject[] houses;
+        public GameObject[] trees;
+        public GameObject[] undergrounds;
+
+
+   
 
         #region Start
 
@@ -55,15 +69,50 @@ namespace LevelGeneration
             var spawnPos = GetSpawnPos(segment.transform);
             _lastSegment = Instantiate(segment.transform, spawnPos, Quaternion.identity);
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
+           
+          
 
             SpawnIntermediate();
         }
+
+        public GameObject RandomHouse() => houses[Random.Range(0, houses.Length)];
+        public GameObject RandomTree() => trees[Random.Range(0, trees.Length)];
+        public GameObject RandomUnderground() => undergrounds[Random.Range(0, undergrounds.Length)];
+
 
         private void SpawnIntermediate()
         {
             var spawnPos = GetSpawnPos(intermediatePlaceHolder.transform);
             _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
+            DecoratorDelegator del = _lastSegment.GetComponent<DecoratorDelegator>();
+            
+            //spawn house at the points
+            Instantiate(RandomHouse().transform, del.housSPLeft.position, del.housSPLeft.rotation, _lastSegment.transform);
+            Instantiate(RandomHouse().transform, del.housSPRight.position,  del.housSPRight.rotation, _lastSegment.transform);
+
+            //maybe spawn something
+            if (Random.value > 0.4f)
+            {
+                //left trees
+                for (int i = 0; i < del.TreeSPLeft.Length; i++)
+                {
+                    Instantiate(RandomTree().transform, del.TreeSPLeft[i].position, Quaternion.identity,
+                        _lastSegment.transform);
+                }
+
+                //right trees
+                for (int i = 0; i < del.TreeSPRight.Length; i++)
+                {
+                    Instantiate(RandomTree().transform, del.TreeSPRight[i].position, Quaternion.identity,
+                        _lastSegment.transform);
+                }
+            }
+
+            Instantiate(RandomUnderground().transform, del.underGroundSP.position, del.underGroundSP.rotation,
+                _lastSegment.transform);
+
+
         }
 
         #endregion
