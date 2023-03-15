@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 namespace LevelGeneration
@@ -21,7 +20,6 @@ namespace LevelGeneration
         {
             _rand = new System.Random();
             SpawnFirstGroup();
-            intermediatePlaceHolder.SetSpeed(segmentSpeed);
         }
 
         #endregion
@@ -48,9 +46,9 @@ namespace LevelGeneration
             MovingObject segment = segments[randomIndex];
 
             var spawnPos = GetSpawnPos(segment.transform);
-            segment.SetSpeed(segmentSpeed);
             _lastSegment = Instantiate(segment.transform, spawnPos, Quaternion.identity);
-            
+            _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
+
             SpawnIntermediate();
         }
 
@@ -58,6 +56,7 @@ namespace LevelGeneration
         {
             var spawnPos = GetSpawnPos(intermediatePlaceHolder.transform);
             _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
+            _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
         }
 
         #endregion
@@ -95,9 +94,9 @@ namespace LevelGeneration
             return _lastSegment.transform.position - distanceBetweenCenters;
         }
 
-        private Vector3 GetCenterToEdge(Transform transform)
+        private Vector3 GetCenterToEdge(Transform objToSpawn)
         {
-            var xScale = transform.localScale.x;
+            var xScale = objToSpawn.localScale.x;
             // divide by 2 as we want the distance between center and edge and not whole scale
             xScale *= 0.5f;
             return new Vector3(xScale, 0, 0);
