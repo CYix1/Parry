@@ -1,19 +1,39 @@
+using System;
+using LevelGeneration;
 using UnityEngine;
 
 namespace CanonStuff
 {
+    // object can be destroyed by a bullet
     public class BulletDestroyable : MonoBehaviour
     {
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (!IsBullet(collision)) return;
-        
+            // only destroy on bullets that were deflected
+            if (!IsBullet(other)) return;
+            if (!WasDeflected(other)) return;
+            
+            // destroy both bullet and canon
             Destroy(gameObject);
+            Destroy(other.gameObject);
+            
+            // TODO: explosion effect
+
         }
 
-        private bool IsBullet(Collision collision)
+        #region Checks
+
+        private bool IsBullet(Collider other)
         {
-            return collision.gameObject.CompareTag("Bullet");
+            return other.CompareTag("Bullet");
         }
+
+        private bool WasDeflected(Collider other)
+        {
+            var bulletComp = other.GetComponent<MovingObject>();
+            return bulletComp.WasReversed();
+        }
+
+        #endregion
     }
 }
