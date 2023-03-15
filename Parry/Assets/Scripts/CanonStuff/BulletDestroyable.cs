@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class BulletDestroyable : MonoBehaviour
+namespace CanonStuff
 {
-    private void OnCollisionEnter(Collision collision)
+    public class BulletDestroyable : MonoBehaviour
     {
-        if (!IsBullet(collision)) return;
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (!IsBullet(collision)) return;
         
-        Destroy(gameObject);
-    }
+            Destroy(gameObject);
+        }
 
-    private bool IsBullet(Collision collision)
-    {
-        return collision.gameObject.CompareTag("Bullet");
+        private bool IsBullet(Collision collision)
+        {
+            return collision.gameObject.CompareTag("Bullet");
+        }
     }
 }
