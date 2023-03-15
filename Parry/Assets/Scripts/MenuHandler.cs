@@ -11,7 +11,6 @@ public class MenuHandler : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("awdno");
         GameData.instance.health = 3;
     }
 
@@ -56,7 +55,6 @@ public class MenuHandler : MonoBehaviour
 
     public void triggerOptionPanel()
     {
-        Debug.Log("aduivus");
         optionPanel.SetActive(!optionPanel.activeSelf);
             
     }
