@@ -5,16 +5,8 @@ using UnityEngine;
 namespace CanonStuff
 {
     // object can be destroyed by a bullet
-    //[RequireComponent(typeof(PlayExplosion))]
     public class BulletDestroyable : MonoBehaviour
     {
-        //private PlayExplosion _playExplosion;
-        
-        private void Start()
-        {
-            //_playExplosion = GetComponent<PlayExplosion>();
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             // only destroy on bullets that were deflected
