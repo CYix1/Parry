@@ -14,9 +14,18 @@ public class Canon : MonoBehaviour
     {
         // spawn bullet at canons pos
         _spawnPos = transform.position;
+    }
 
+    public void StartShooting()
+    {
         // calls Shoot every shotInterval
-        InvokeRepeating(nameof(Shoot), shotInterval, shotInterval);
+        InvokeRepeating(nameof(Shoot), 0, shotInterval);
+    }
+    public void StopShooting()
+    {
+        // stop shooting if player has passed
+        // CancelInvoke() stops all invoke calls on the gameObject
+        CancelInvoke();
     }
 
     private void Shoot()
