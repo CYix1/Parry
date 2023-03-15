@@ -80,6 +80,15 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""esc"",
+                    ""type"": ""Button"",
+                    ""id"": ""e12e794a-65de-4e1c-803f-25bd17fc1f3d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -236,6 +245,28 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""action"": ""dodge"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a32a42b-1ee8-449d-90d9-e20d3910bf18"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""esc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13d2862b-9305-4cb8-a185-5372932dfdb7"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""esc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -250,6 +281,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         m_Character_parry = m_Character.FindAction("parry", throwIfNotFound: true);
         m_Character_deflect = m_Character.FindAction("deflect", throwIfNotFound: true);
         m_Character_counter = m_Character.FindAction("counter", throwIfNotFound: true);
+        m_Character_esc = m_Character.FindAction("esc", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,6 +349,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_parry;
     private readonly InputAction m_Character_deflect;
     private readonly InputAction m_Character_counter;
+    private readonly InputAction m_Character_esc;
     public struct CharacterActions
     {
         private @MainInput m_Wrapper;
@@ -327,6 +360,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         public InputAction @parry => m_Wrapper.m_Character_parry;
         public InputAction @deflect => m_Wrapper.m_Character_deflect;
         public InputAction @counter => m_Wrapper.m_Character_counter;
+        public InputAction @esc => m_Wrapper.m_Character_esc;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -354,6 +388,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @counter.started += instance.OnCounter;
             @counter.performed += instance.OnCounter;
             @counter.canceled += instance.OnCounter;
+            @esc.started += instance.OnEsc;
+            @esc.performed += instance.OnEsc;
+            @esc.canceled += instance.OnEsc;
         }
 
         private void UnregisterCallbacks(ICharacterActions instance)
@@ -376,6 +413,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @counter.started -= instance.OnCounter;
             @counter.performed -= instance.OnCounter;
             @counter.canceled -= instance.OnCounter;
+            @esc.started -= instance.OnEsc;
+            @esc.performed -= instance.OnEsc;
+            @esc.canceled -= instance.OnEsc;
         }
 
         public void RemoveCallbacks(ICharacterActions instance)
@@ -401,5 +441,6 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         void OnParry(InputAction.CallbackContext context);
         void OnDeflect(InputAction.CallbackContext context);
         void OnCounter(InputAction.CallbackContext context);
+        void OnEsc(InputAction.CallbackContext context);
     }
 }
