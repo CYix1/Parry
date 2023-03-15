@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 279345293}
-  firstGroupCount: 4
+  firstGroupCount: 5
   segments:
   - {fileID: 3339518661912284418, guid: 9cb3f6eba540ff241964ab7d8f99cddd, type: 3}
   - {fileID: 3376083784667900399, guid: 44f2a97971538de4496994d5f6a7836b, type: 3}
@@ -449,7 +449,7 @@ MonoBehaviour:
   - {fileID: 5074501140742335984, guid: ee8e2d53071eda44cbcaaebfeaeeec02, type: 3}
   - {fileID: 1115172856311827353, guid: c9af95d7453be2a41988c85d49aabea6, type: 3}
   - {fileID: 8449218438702687681, guid: c48a1774de7673e4c9b357c91d009f81, type: 3}
-  segmentSpeed: 10
+  segmentSpeed: 100
 --- !u!4 &1092050527
 Transform:
   m_ObjectHideFlags: 0

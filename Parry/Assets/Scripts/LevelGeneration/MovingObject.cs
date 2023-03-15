@@ -7,7 +7,7 @@ namespace LevelGeneration
     public class MovingObject : MonoBehaviour
     {
         // can be set by the instantiated object
-        public static float Speed = 0.05f;
+        private float _speed = 10f;
         private bool _reversed;
         
         void Update()
@@ -22,13 +22,23 @@ namespace LevelGeneration
         private float GetNewXPos()
         {
             var xPos = transform.position.x;
-            var speed = _reversed ? -Speed : Speed;
+            var speed = _reversed ? -_speed : _speed;
             return xPos + speed * Time.deltaTime;
         }
 
         public void ReverseDirection()
         {
             _reversed = !_reversed;
+        }
+
+        public void SetSpeed(float speed)
+        {
+            _speed = speed;
+        }
+
+        public float GetSpeed()
+        {
+            return _speed;
         }
     }
 }
