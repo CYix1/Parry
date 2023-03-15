@@ -24,6 +24,7 @@ namespace LevelGeneration
         }
 
 
+        // check what tag the object has
         #region TagChecks
 
         private bool HasCorrectTag(Collider other)

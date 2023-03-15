@@ -20,7 +20,6 @@ namespace LevelGeneration
         {
             _rand = new System.Random();
             SpawnFirstGroup();
-            intermediatePlaceHolder.SetSpeed(segmentSpeed);
         }
 
         #endregion
@@ -47,9 +46,9 @@ namespace LevelGeneration
             MovingObject segment = segments[randomIndex];
 
             var spawnPos = GetSpawnPos(segment.transform);
-            segment.SetSpeed(segmentSpeed);
             _lastSegment = Instantiate(segment.transform, spawnPos, Quaternion.identity);
-            
+            _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
+
             SpawnIntermediate();
         }
 
@@ -57,6 +56,7 @@ namespace LevelGeneration
         {
             var spawnPos = GetSpawnPos(intermediatePlaceHolder.transform);
             _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
+            _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
         }
 
         #endregion
