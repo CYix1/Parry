@@ -88,8 +88,11 @@ namespace LevelGeneration
             DecoratorDelegator del = _lastSegment.GetComponent<DecoratorDelegator>();
             
             //spawn house at the points
-            Instantiate(RandomHouse().transform, del.housSPLeft.position, del.housSPLeft.rotation, _lastSegment.transform);
-            Instantiate(RandomHouse().transform, del.housSPRight.position,  del.housSPRight.rotation, _lastSegment.transform);
+            var temp=Instantiate(RandomHouse().transform, del.housSPLeft.position, del.housSPLeft.rotation, _lastSegment.transform);
+            temp.transform.localScale = del.housSPLeft.localScale;
+            
+            temp=Instantiate(RandomHouse().transform, del.housSPRight.position,  del.housSPRight.rotation, _lastSegment.transform);
+            temp.transform.localScale = del.housSPRight.localScale;
 
             //maybe spawn something
             if (Random.value > 0.4f)
@@ -97,20 +100,23 @@ namespace LevelGeneration
                 //left trees
                 for (int i = 0; i < del.TreeSPLeft.Length; i++)
                 {
-                    Instantiate(RandomTree().transform, del.TreeSPLeft[i].position, Quaternion.identity,
+                    temp= Instantiate(RandomTree().transform, del.TreeSPLeft[i].position, Quaternion.identity,
                         _lastSegment.transform);
+                    temp.transform.localScale = del.TreeSPLeft[i].localScale;
                 }
 
                 //right trees
                 for (int i = 0; i < del.TreeSPRight.Length; i++)
                 {
-                    Instantiate(RandomTree().transform, del.TreeSPRight[i].position, Quaternion.identity,
+                    temp=  Instantiate(RandomTree().transform, del.TreeSPRight[i].position, Quaternion.identity,
                         _lastSegment.transform);
+                    temp.transform.localScale = del.TreeSPRight[i].localScale;
                 }
             }
 
-            Instantiate(RandomUnderground().transform, del.underGroundSP.position, del.underGroundSP.rotation,
+            temp=  Instantiate(RandomUnderground().transform, del.underGroundSP.position, del.underGroundSP.rotation,
                 _lastSegment.transform);
+            temp.transform.localScale = del.underGroundSP.localScale;
 
 
         }

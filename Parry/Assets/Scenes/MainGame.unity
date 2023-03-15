@@ -696,6 +696,36 @@ MonoBehaviour:
   fistSegment: {fileID: 2695847513353331343, guid: a2f4fe1a13bd7b449a3f8b60d710bb04, type: 3}
   segmentSpeed: 8
   intermediatePlaceHolder: {fileID: 2695847513353331343, guid: a2f4fe1a13bd7b449a3f8b60d710bb04, type: 3}
+  houses:
+  - {fileID: 919132149155446097, guid: f5d96f06876cc334cab4253dfbd07bdd, type: 3}
+  - {fileID: 919132149155446097, guid: db42de7e25e5d664eaa1dbcd3e88acb9, type: 3}
+  - {fileID: 919132149155446097, guid: 8f2167c4b02f34840b500dc86d46fd8d, type: 3}
+  - {fileID: 919132149155446097, guid: 4d4743a2db33fa042a16650dcb86988d, type: 3}
+  - {fileID: 919132149155446097, guid: 6628978002d31334f8275a09efb36335, type: 3}
+  - {fileID: 919132149155446097, guid: 7c5ff1d1d3d2cff41b96704227c3e95e, type: 3}
+  - {fileID: 919132149155446097, guid: df77acd7927f4f94c81dd5040180d4b7, type: 3}
+  - {fileID: 919132149155446097, guid: 0f50f43d2ef38de4387e42c29b78ad5b, type: 3}
+  - {fileID: 919132149155446097, guid: 1f015a5fce9a7594896febb91a6af284, type: 3}
+  - {fileID: 919132149155446097, guid: d2b5066c1cca2bf4c977cfe473e935d6, type: 3}
+  - {fileID: 919132149155446097, guid: 4897038a165cc6f41b8e272d53ef5fa2, type: 3}
+  - {fileID: 919132149155446097, guid: e9d0d0eb47bfcc8429fcdb676f30cc8e, type: 3}
+  - {fileID: 919132149155446097, guid: ba2593a58e4848d48a7344eb8a95207c, type: 3}
+  - {fileID: 919132149155446097, guid: 13a16feae973f834e82733dd29b73be8, type: 3}
+  - {fileID: 919132149155446097, guid: 1f08e23a68ed82c45a87bbb32d025f43, type: 3}
+  - {fileID: 919132149155446097, guid: 212281c443aef9d4a9bc27007a8ffe11, type: 3}
+  - {fileID: 919132149155446097, guid: 6bb954f3aaeeab04aa4a7c9b4bad07a8, type: 3}
+  - {fileID: 919132149155446097, guid: 56dee78b0aedaf946a137075c8f7b67c, type: 3}
+  - {fileID: 919132149155446097, guid: 1e18ff8808796f746a1b4d2b0fb2b266, type: 3}
+  - {fileID: 919132149155446097, guid: 80c24af9e5d1af1469ae1e6fe4b5305f, type: 3}
+  - {fileID: 919132149155446097, guid: ca6fbb87695d6a345b4596c5417f7a75, type: 3}
+  trees:
+  - {fileID: 919132149155446097, guid: 5f18edca02a97f64f8d9f35e0f35b1b4, type: 3}
+  - {fileID: 919132149155446097, guid: 0fcf4890ffeaa9c4fbc76943c5d291ac, type: 3}
+  undergrounds:
+  - {fileID: 919132149155446097, guid: 035dc7f1b0517234e813949ee68b4f85, type: 3}
+  - {fileID: 919132149155446097, guid: e1cbce765e116664996df3eedfafcb00, type: 3}
+  - {fileID: 919132149155446097, guid: abea9caf48658bf48904f846ad63122d, type: 3}
+  - {fileID: 919132149155446097, guid: 80743178995b7c340acd2b907bc510ad, type: 3}
 --- !u!4 &252049316
 Transform:
   m_ObjectHideFlags: 0
