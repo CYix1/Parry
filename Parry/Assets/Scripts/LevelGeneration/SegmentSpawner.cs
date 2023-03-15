@@ -8,8 +8,9 @@ namespace LevelGeneration
     {
         [Header("Spawning")] [SerializeField] private Transform spawnPoint;
         [SerializeField] private int firstGroupCount = 3;
-        [Header("Segments")] [SerializeField] private List<Transform> segments = new();
+        [Header("Segments")] [SerializeField] private List<MovingObject> segments = new();
         [SerializeField] private float segmentSpeed = 10f;
+        [SerializeField] private MovingObject intermediatePlaceHolder;
 
         private Transform _lastSegment;
         private System.Random _rand;
@@ -20,6 +21,7 @@ namespace LevelGeneration
         {
             _rand = new System.Random();
             SpawnFirstGroup();
+            intermediatePlaceHolder.SetSpeed(segmentSpeed);
         }
 
         #endregion
@@ -43,14 +45,19 @@ namespace LevelGeneration
         private void SpawnSegment()
         {
             int randomIndex = GetRandomIndex();
-            Transform segment = segments[randomIndex];
+            MovingObject segment = segments[randomIndex];
 
-            var spawnPos = GetSpawnPos(segment);
-            _lastSegment = Instantiate(segment, spawnPos, Quaternion.identity);
+            var spawnPos = GetSpawnPos(segment.transform);
+            segment.SetSpeed(segmentSpeed);
+            _lastSegment = Instantiate(segment.transform, spawnPos, Quaternion.identity);
+            
+            SpawnIntermediate();
+        }
 
-            // set speed for all spawned segments
-            var segComponent = _lastSegment.GetComponent<MovingObject>();
-            segComponent.SetSpeed(segmentSpeed);
+        private void SpawnIntermediate()
+        {
+            var spawnPos = GetSpawnPos(intermediatePlaceHolder.transform);
+            _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
         }
 
         #endregion
