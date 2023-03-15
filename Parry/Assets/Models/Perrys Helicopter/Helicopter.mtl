@@ -1,0 +1,40 @@
+newmtl P_body
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka P_body.png
+map_Kd P_body.png
+map_d P_body.png
+newmtl P_tail
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka P_tail.png
+map_Kd P_tail.png
+map_d P_tail.png
+newmtl body
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka body.png
+map_Kd body.png
+map_d body.png
+newmtl pely_a
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka pely_a.png
+map_Kd pely_a.png
+map_d pely_a.png
+newmtl prope
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka prope.png
+map_Kd prope.png
+map_d prope.png

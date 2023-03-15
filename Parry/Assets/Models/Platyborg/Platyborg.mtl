@@ -1,0 +1,32 @@
+newmtl A_tex_1
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka A_tex_1.png
+map_Kd A_tex_1.png
+map_d A_tex_1.png
+newmtl Tex_1
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka Tex_1.png
+map_Kd Tex_1.png
+map_d Tex_1.png
+newmtl Tex_2
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka Tex_2.png
+map_Kd Tex_2.png
+map_d Tex_2.png
+newmtl Tex_3
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka Tex_3.png
+map_Kd Tex_3.png
+map_d Tex_3.png

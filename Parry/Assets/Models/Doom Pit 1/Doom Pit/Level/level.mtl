@@ -1,0 +1,496 @@
+# Blender MTL File: 'None'
+# Material Count: 38
+
+newmtl A_maguma
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd A_maguma.png
+map_Ka  A_maguma.png
+map_d  A_maguma.png
+
+newmtl B_kemuri
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd B_kemuri.png
+map_Ka  B_kemuri.png
+map_d  B_kemuri.png
+
+newmtl C_D_anime
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C_D_anime.png
+map_Ka  C_D_anime.png
+map_d  C_D_anime.png
+
+newmtl D_hikari
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd D_hikari.png
+map_Ka  D_hikari.png
+map_d  D_hikari.png
+
+newmtl E_phi_sw
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd E_phi_sw.png
+map_Ka  E_phi_sw.png
+map_d  E_phi_sw.png
+
+newmtl F_Pe_swich
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd F_Pe_swich.png
+map_Ka  F_Pe_swich.png
+map_d  F_Pe_swich.png
+
+newmtl hikari2
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hikari2.png
+map_Ka  hikari2.png
+map_d  hikari2.png
+
+newmtl lambert1
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.376471 0.376471 0.376471
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert381.png
+map_Ka  lambert1.png
+map_d  lambert1.png
+
+newmtl lambert23
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert23.png
+map_Ka  lambert23.png
+map_d  lambert23.png
+
+newmtl lambert24
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert24.png
+map_Ka  lambert24.png
+map_d  lambert24.png
+
+newmtl lambert373
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert373.png
+map_Ka  lambert373.png
+map_d  lambert373.png
+
+newmtl lambert374
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert374.png
+map_Ka  lambert374.png
+map_d  lambert374.png
+
+newmtl lambert375
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert375.png
+map_Ka  lambert375.png
+map_d  lambert375.png
+
+newmtl lambert376
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert376.png
+map_Ka  lambert376.png
+map_d  lambert376.png
+
+newmtl lambert378
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert378.png
+map_Ka  lambert378.png
+map_d  lambert378.png
+
+newmtl lambert379
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert379.png
+map_Ka  lambert379.png
+map_d  lambert379.png
+
+newmtl lambert380
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert380.png
+map_Ka  lambert380.png
+map_d  lambert380.png
+
+newmtl lambert381
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert381.png
+map_Ka  lambert381.png
+map_d  lambert381.png
+
+newmtl lambert391
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert391.png
+map_Ka  lambert391.png
+map_d  lambert391.png
+
+newmtl lambert395
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert395.png
+map_Ka  lambert395.png
+map_d  lambert395.png
+
+newmtl lambert406
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert406.png
+map_Ka  lambert406.png
+map_d  lambert406.png
+
+newmtl lambert410
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert410.png
+map_Ka  lambert410.png
+map_d  lambert410.png
+
+newmtl lambert418
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert418.png
+map_Ka  lambert418.png
+map_d  lambert418.png
+
+newmtl lambert419
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert419.png
+map_Ka  lambert419.png
+map_d  lambert419.png
+
+newmtl lambert422
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert422.png
+map_Ka  lambert422.png
+map_d  lambert422.png
+
+newmtl lambert700
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert700.png
+map_Ka  lambert700.png
+map_d  lambert700.png
+
+newmtl lambert701
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert701.png
+map_Ka  lambert701.png
+map_d  lambert701.png
+
+newmtl lambert711
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert711.png
+map_Ka  lambert711.png
+map_d  lambert711.png
+
+newmtl lambert712
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert712.png
+map_Ka  lambert712.png
+map_d  lambert712.png
+
+newmtl lambert713
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert713.png
+map_Ka  lambert713.png
+map_d  lambert713.png
+
+newmtl lambert714
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert714.png
+map_Ka  lambert714.png
+map_d  lambert714.png
+
+newmtl lambert715
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert715.png
+map_Ka  lambert715.png
+map_d  lambert715.png
+
+newmtl lambert716
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert716.png
+map_Ka  lambert716.png
+map_d  lambert716.png
+
+newmtl lambert717
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert717.png
+map_Ka  lambert717.png
+map_d  lambert717.png
+
+newmtl lambert718
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert718.png
+map_Ka  lambert718.png
+map_d  lambert718.png
+
+newmtl lambert720
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert720.png
+map_Ka  lambert720.png
+map_d  lambert720.png
+
+newmtl lambert722
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd lambert722.png
+map_Ka  lambert722.png
+map_d  lambert722.png
+
+newmtl shiro
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.784314 0.784314
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd shiro.png
+map_Ka  shiro.png
+map_d  shiro.png
