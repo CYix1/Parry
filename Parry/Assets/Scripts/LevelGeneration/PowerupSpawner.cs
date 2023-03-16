@@ -15,7 +15,6 @@ public class PowerupSpawner : MonoBehaviour
 
     public void SpawnPowerup()
     {
-        Debug.Log("SPAWENOIAENFAs");
         var pw = powerups[Random.Range(0, powerups.Length)];
         var new_pw=Instantiate(pw.transform, positions[Random.Range(0,positions.Length)].position,Quaternion.identity);
         new_pw.gameObject.SetActive(true);
