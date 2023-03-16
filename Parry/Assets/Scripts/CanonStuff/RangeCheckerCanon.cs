@@ -8,7 +8,7 @@ namespace CanonStuff
         private BoxCollider _collider;
         private Canon _canon;
 
-        private void Start()
+        private void Awake()
         {
             InitCanon();
         }
