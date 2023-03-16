@@ -6,26 +6,23 @@ namespace LevelGeneration
 {
     public class SegmentSpawner : MonoBehaviour
     {
-        [Header("Spawning")] [SerializeField] private Transform spawnPoint;
-        [SerializeField] private int firstGroupCount = 3;
-        [Header("Segments")] [SerializeField] private List<MovingObject> segments = new();
+        [Header("Spawning")] 
+        [SerializeField] private Transform spawnPoint;
+        [SerializeField] private float segmentSpeed = 8f;
+        [SerializeField] private int firstGroupCount = 10;
+        
+        [Header("Segments")]
         [SerializeField] private MovingObject fistSegment;
-        [SerializeField] private float segmentSpeed = 10f;
-        [SerializeField] private MovingObject intermediatePlaceHolder;
-        [Header("")]
-        private Transform _lastSegment;
-        private System.Random _rand;
-        
-        //sry kerstin ich zerstöre dein script ups ~ Yixi
-        // alles gut xD
-       
-        
+        [SerializeField] private List<MovingObject> segments = new();
+        [SerializeField] private List<MovingObject> intermediates = new();
+
         [Header("Decoration Models")]
         public GameObject[] houses;
         public GameObject[] trees;
         public GameObject[] undergrounds;
 
-
+        private System.Random _rand;
+        private Transform _lastSegment;
    
 
         #region Start
@@ -57,7 +54,7 @@ namespace LevelGeneration
 
         private void SpawnRandomSegment()
         {
-            int randomIndex = GetRandomIndex();
+            int randomIndex = GetRandomSegmentIndex();
             MovingObject segment = segments[randomIndex];
 
             SpawnSegment(segment);
@@ -71,7 +68,7 @@ namespace LevelGeneration
            
           
 
-            SpawnIntermediate();
+            SpawnRandomIntermediateAndDeco();
         }
 
         public GameObject RandomHouse() => houses[Random.Range(0, houses.Length)];
@@ -79,10 +76,13 @@ namespace LevelGeneration
         public GameObject RandomUnderground() => undergrounds[Random.Range(0, undergrounds.Length)];
 
 
-        private void SpawnIntermediate()
+        private void SpawnRandomIntermediateAndDeco()
         {
-            var spawnPos = GetSpawnPos(intermediatePlaceHolder.transform);
-            _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
+            var randomIndex = GetRandomIntermediateIndex();
+            MovingObject intermediate = intermediates[randomIndex];
+            
+            var spawnPos = GetSpawnPos(intermediate.transform);
+            _lastSegment = Instantiate(intermediate.transform, spawnPos, Quaternion.identity);
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
             
             DecoratorDelegator del = _lastSegment.GetComponentInChildren<DecoratorDelegator>();
@@ -130,11 +130,16 @@ namespace LevelGeneration
 
         #region Helpers
 
-        private int GetRandomIndex()
+        private int GetRandomSegmentIndex()
         {
             // segments.Count as it is used to get a random segment from the list
             // Next(x) returns a random value in [0,x[
             return _rand.Next(segments.Count);
+        }
+        private int GetRandomIntermediateIndex()
+        {
+            // ->  see GetRandomSegmentIndex()
+            return _rand.Next(intermediates.Count);
         }
 
         private Vector3 GetSpawnPos(Transform newSegment)
