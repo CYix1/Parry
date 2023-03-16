@@ -12,9 +12,9 @@ public class JetpackPowerup : MonoBehaviour
     private float _speed = 10f;
     private bool _active = false;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player")&&!_active)
+        if (collision.CompareTag("Player")&&!_active)
         {
             SetActive();
             powerUp.SetActive(false);
