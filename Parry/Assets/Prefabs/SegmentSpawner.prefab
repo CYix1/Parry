@@ -47,7 +47,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   segmentSpeed: 8
   firstGroupCount: 10
-  fistSegment: {fileID: 2695847513353331343, guid: 00f7252a292e29b4d955aca59880cc53, type: 3}
+  firstSegment: {fileID: 2695847513353331343, guid: 00f7252a292e29b4d955aca59880cc53, type: 3}
   segments:
   - {fileID: 8449218438702687693, guid: f313994afba0c3d49a53d13794297666, type: 3}
   - {fileID: 8449218438702687693, guid: 8cb2a2cecdb30274c96a92b223ffdae0, type: 3}
