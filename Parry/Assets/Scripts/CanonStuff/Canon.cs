@@ -8,19 +8,13 @@ public class Canon : MonoBehaviour
     [SerializeField] private float shotSpeed = 10f;
     [SerializeField] private Transform bullet;
 
-    private Vector3 _spawnPos;
-
-    private void Start()
-    {
-        // spawn bullet at canons pos
-        _spawnPos = transform.position;
-    }
 
     public void StartShooting()
     {
         // calls Shoot every shotInterval
         InvokeRepeating(nameof(Shoot), 0, shotInterval);
     }
+
     public void StopShooting()
     {
         // stop shooting if player has passed
@@ -30,7 +24,7 @@ public class Canon : MonoBehaviour
 
     private void Shoot()
     {
-        var bulletGo = Instantiate(bullet, _spawnPos, Quaternion.identity);
+        var bulletGo = Instantiate(bullet, transform.position, Quaternion.identity);
         var movObjComponent = bulletGo.GetComponent<MovingObject>();
         movObjComponent.SetSpeed(shotSpeed);
     }
