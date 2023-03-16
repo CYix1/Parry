@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf804b75347c0b439d3c2dabc6c2daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   standardRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
