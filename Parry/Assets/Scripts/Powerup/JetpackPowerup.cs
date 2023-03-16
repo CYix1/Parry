@@ -21,7 +21,6 @@ public class JetpackPowerup : MonoBehaviour
             _active = true;
             player.GetComponent<Rigidbody>().useGravity = false;
             timer = 10f;
-            Debug.Log("dao");
         }
     }
 
