@@ -9,6 +9,7 @@ public class HealtPowerup :MonoBehaviour
         {
             GameData.instance.health += 2;
             Debug.Log("Add Health");
+            UIOverlay.UIUpdate.Invoke();
             Destroy(gameObject);
         }
     }

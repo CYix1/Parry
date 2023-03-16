@@ -33,7 +33,8 @@ public class ObstacleScript : MonoBehaviour
 
             GameData.instance.health--;
             Debug.Log("Lost Health");
-
+            
+            UIOverlay.UIUpdate.Invoke();
             if (GameData.instance.health <= 0)
             {
                 SceneManager.LoadScene("MainMenu");
