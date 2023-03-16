@@ -151,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780805857385789672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.241, y: 1.07, z: -0.324}
+  m_LocalPosition: {x: 0.292, y: 1.07, z: -0.324}
   m_LocalScale: {x: 0.3, y: 2.18, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -603,7 +603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5581777745707775921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.241, y: 1.07, z: 0.342}
+  m_LocalPosition: {x: 0.292, y: 1.07, z: 0.342}
   m_LocalScale: {x: 0.3, y: 2.18, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -819,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319609978455705425, guid: 5576552952a5e054d80eb9acc812b8b4, type: 3}
       propertyPath: m_Name
-      value: GameObject - Copy
+      value: Lanes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5576552952a5e054d80eb9acc812b8b4, type: 3}

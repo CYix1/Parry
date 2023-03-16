@@ -1015,7 +1015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319609978455705425, guid: 5576552952a5e054d80eb9acc812b8b4, type: 3}
       propertyPath: m_Name
-      value: GameObject - Copy
+      value: Lanes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5576552952a5e054d80eb9acc812b8b4, type: 3}

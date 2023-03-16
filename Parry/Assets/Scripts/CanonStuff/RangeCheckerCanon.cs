@@ -15,6 +15,7 @@ namespace CanonStuff
 
         private void OnTriggerEnter(Collider other)
         {
+            Debug.Log(gameObject.name + " entered collider.");
             if (!IsPlayer(other)) return;
 
             _canon.StartShooting();
@@ -40,7 +41,7 @@ namespace CanonStuff
 
         private bool IsPlayer(Collider other)
         {
-            return other.CompareTag("Player");
+            return other.CompareTag("PlayerRB");
         }
 
         #endregion
