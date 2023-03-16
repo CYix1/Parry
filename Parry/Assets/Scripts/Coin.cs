@@ -8,9 +8,11 @@ public class Coin : MonoBehaviour
         
         if (!IsPlayer(other)) return;
         
-        Destroy(gameObject);
-        
         GameData.instance.coins++;
+        UIOverlay.UIUpdate.Invoke();
+        
+        Destroy(gameObject);
+
     }
 
     private bool IsPlayer(Collider other)
