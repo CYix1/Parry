@@ -12,7 +12,7 @@ namespace LevelGeneration
         [SerializeField] private int firstGroupCount = 10;
         
         [Header("Segments")]
-        [SerializeField] private MovingObject fistSegment;
+        [SerializeField] private MovingObject firstSegment;
         [SerializeField] private List<MovingObject> segments = new();
         [SerializeField] private List<MovingObject> intermediates = new();
 
@@ -45,7 +45,7 @@ namespace LevelGeneration
 
         private void SpawnFirst()
         {
-            SpawnSegment(fistSegment);
+            SpawnSegment(firstSegment);
             for (int i = 0; i < firstGroupCount; i++)
             {
                 SpawnRandomSegment();
