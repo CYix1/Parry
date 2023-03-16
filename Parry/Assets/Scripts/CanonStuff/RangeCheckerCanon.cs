@@ -11,7 +11,6 @@ namespace CanonStuff
         private void Start()
         {
             _canon = GetComponentInParent<Canon>();
-            Debug.Log("canon = " + _canon.name);
         }
 
         private void OnTriggerEnter(Collider other)

@@ -32,7 +32,6 @@ public class MenuHandler : MonoBehaviour
     {
         triggerOptionPanel();
         Time.timeScale = optionPanel.activeSelf ? 0 : 1;
-        Debug.Log("RESUME");
     }
 
     public void SetMasterVolume(float sliderValue) => SetLevel("MasterVolume", sliderValue);
