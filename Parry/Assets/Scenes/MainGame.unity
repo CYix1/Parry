@@ -158,6 +158,8 @@ MonoBehaviour:
   - {fileID: 1017569293}
   powerups:
   - {fileID: 1651186943}
+  - {fileID: 759378082}
+  - {fileID: 764771922}
   spawnintervall: 5
   timer: 0
 --- !u!4 &50943845
@@ -841,6 +843,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6888704648261650131, guid: 37edbe565c12a844ebe3e2846007e0b0, type: 3}
+      propertyPath: timer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888704648261650131, guid: 37edbe565c12a844ebe3e2846007e0b0, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 289448120}
@@ -1492,10 +1498,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705168806}
   m_CullTransparentMesh: 1
+--- !u!1 &759378082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888704648261650142, guid: 37edbe565c12a844ebe3e2846007e0b0, type: 3}
+  m_PrefabInstance: {fileID: 417202626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &759378086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6888704648261650130, guid: 37edbe565c12a844ebe3e2846007e0b0, type: 3}
   m_PrefabInstance: {fileID: 417202626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &764771922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6337018715909669020, guid: 5f477f0cf7d8e8845aeb3c4ff9149270, type: 3}
+  m_PrefabInstance: {fileID: 6337018715314929358}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &764771927 stripped
 Transform:
@@ -4466,7 +4482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337018715909669020, guid: 5f477f0cf7d8e8845aeb3c4ff9149270, type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: Healthpowerup
       objectReference: {fileID: 0}
     - target: {fileID: 6337018715909669020, guid: 5f477f0cf7d8e8845aeb3c4ff9149270, type: 3}
       propertyPath: m_IsActive

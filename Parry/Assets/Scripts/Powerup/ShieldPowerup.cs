@@ -16,6 +16,7 @@ public class ShieldPowerup: MonoBehaviour
             var new_pw=Instantiate(shield.transform, new_pos,Quaternion.identity,player.transform);
             new_pw.gameObject.SetActive(true);
             Destroy(new_pw.GetComponent<MovingObject>());
+            Destroy(gameObject);
         }
     }
 }
