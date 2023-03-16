@@ -86,7 +86,6 @@ namespace LevelGeneration
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
             
             DecoratorDelegator del = _lastSegment.GetComponentInChildren<DecoratorDelegator>();
-            Debug.Log(del);
             //spawn house at the points
             var temp=Instantiate(RandomHouse().transform, del.housSPLeft.position, del.housSPLeft.rotation, _lastSegment.transform);
             temp.transform.localScale = del.housSPLeft.localScale;

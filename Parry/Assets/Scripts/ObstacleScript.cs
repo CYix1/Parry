@@ -10,7 +10,6 @@ public class ObstacleScript : MonoBehaviour
 
     private MeshRenderer _meshRenderer;
     private List<Color> _originalColors;
-    private bool _doHitFlashing;
 
     private const int NormalPerryIndex = 0;
     private const int DodgePerryIndex = 1;
@@ -19,10 +18,8 @@ public class ObstacleScript : MonoBehaviour
     private void Start()
     {
         _originalColors = new();
-        
-        AssignCorrectMeshRendererAndColor();
 
-        _doHitFlashing = false;
+        AssignCorrectMeshRendererAndColor();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,8 +29,7 @@ public class ObstacleScript : MonoBehaviour
             PlayHitIndication();
 
             GameData.instance.health--;
-            Debug.Log("Lost Health");
-            
+
             UIOverlay.UIUpdate.Invoke();
             if (GameData.instance.health <= 0)
             {
@@ -46,9 +42,6 @@ public class ObstacleScript : MonoBehaviour
 
     private void PlayHitIndication()
     {
-        // was already hit -> don't layer flashes
-        if (_doHitFlashing) return;
-
         // flash active mesh
         AssignCorrectMeshRendererAndColor();
         StartCoroutine(nameof(FlashRed));
@@ -56,9 +49,6 @@ public class ObstacleScript : MonoBehaviour
 
     private IEnumerator FlashRed()
     {
-        // prevent coroutine being called concurrently
-        _doHitFlashing = true;
-
         for (int i = 0; i < numberOfFlashes; i++)
         {
             // switch between red and white in certain interval
@@ -72,7 +62,6 @@ public class ObstacleScript : MonoBehaviour
         // switch back to original color
         ResetColor();
         // tell PlayHitAnimation() that it can call coroutine again from now on
-        _doHitFlashing = false;
     }
 
     #endregion
@@ -97,9 +86,9 @@ public class ObstacleScript : MonoBehaviour
     private void AssignOriginalColors()
     {
         ClearOriginalColors();
-        
+
         var materialCount = _meshRenderer.materials.Length;
-        
+
         for (int i = 0; i < materialCount; i++)
         {
             _originalColors.Add(_meshRenderer.materials[i].color);
@@ -114,7 +103,7 @@ public class ObstacleScript : MonoBehaviour
     private void ResetColor()
     {
         var materialCount = _meshRenderer.materials.Length;
-        
+
         for (int i = 0; i < materialCount; i++)
         {
             ChangeColorTo(_originalColors[i], i);
@@ -129,7 +118,7 @@ public class ObstacleScript : MonoBehaviour
     private void ChangeColorForAllTo(Color color)
     {
         var materialCount = _meshRenderer.materials.Length;
-        
+
         for (int i = 0; i < materialCount; i++)
         {
             ChangeColorTo(color, i);

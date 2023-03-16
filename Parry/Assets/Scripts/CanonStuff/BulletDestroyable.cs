@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CanonStuff
 {
-    // object can be destroyed by a bullet
+    // object that can be destroyed by a bullet
     public class BulletDestroyable : MonoBehaviour
     {
         [SerializeField] private Explosion explosion;
