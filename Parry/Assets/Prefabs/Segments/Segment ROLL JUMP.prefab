@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5074501140742335884}
   - component: {fileID: 5074501140742335985}
   m_Layer: 0
-  m_Name: Segment RED
+  m_Name: Segment ROLL JUMP
   m_TagString: Segment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
