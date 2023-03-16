@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1184586450510084653}
   - component: {fileID: 8347601398646786011}
   m_Layer: 0
-  m_Name: body
-  m_TagString: Untagged
+  m_Name: police car
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8449218438702687681}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1184586450510084653
 MeshFilter:
@@ -124,9 +124,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3589784144265846072}
+  - {fileID: 4476065254930319526}
   - {fileID: 6139571292750929001}
   - {fileID: 2916986848956995160}
-  - {fileID: 4476065254930319526}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -238,7 +238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5385583561642232533, guid: 229679e4a800d7c44b5c35c0e1c7a558, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5385583561642232533, guid: 229679e4a800d7c44b5c35c0e1c7a558, type: 3}
       propertyPath: m_LocalPosition.x
@@ -462,7 +462,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5385583561642232533, guid: 9e18c10f0d8c6a54e9942b627d0ef241, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5385583561642232533, guid: 9e18c10f0d8c6a54e9942b627d0ef241, type: 3}
       propertyPath: m_LocalPosition.x

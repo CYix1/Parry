@@ -65,9 +65,7 @@ public class CharacterMovement : MonoBehaviour
 
     IEnumerator JumpEnumerator()
     {
-        Debug.Log("aFesfie");
         activity = Activity.JUMPING;
-        Debug.Log(activity);
         body.velocity += new Vector3(0f, jumpStrength, 0f);
         while (body.velocity.y != 0 || body.position.y != 1)
         {
@@ -89,7 +87,6 @@ public class CharacterMovement : MonoBehaviour
     IEnumerator DodgeEnumerator()
     {
         
-        Debug.Log("rthrjtfrreg");
         activity = Activity.DODGING;
         transform.localScale = new Vector3(1f, 0.5f, 1f); 
         foreach (var parry in perrys)

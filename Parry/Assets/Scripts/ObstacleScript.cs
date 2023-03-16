@@ -24,7 +24,7 @@ public class ObstacleScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Obstacle") || other.CompareTag("Bullet"))
+        if (other.CompareTag("Obstacle") || other.CompareTag("Bullet") || other.CompareTag("Canon"))
         {
             PlayHitIndication();
 
