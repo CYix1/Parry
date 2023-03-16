@@ -1,19 +1,20 @@
 using UnityEngine;
 
 // checks if player is in range and shoots only if so
+// stops shooting if player has passed canon
 namespace CanonStuff
 {
     public class RangeCheckerCanon : MonoBehaviour
     {
-        private BoxCollider _collider;
         private Canon _canon;
 
         private void Start()
         {
-            InitCanon();
+            _canon = GetComponentInParent<Canon>();
+            Debug.Log("canon = " + _canon.name);
         }
 
-        private void OnTriggerEnter(Collider other) // detecting player works
+        private void OnTriggerEnter(Collider other)
         {
             if (!IsPlayer(other)) return;
 
@@ -26,15 +27,6 @@ namespace CanonStuff
 
             _canon.StopShooting();
         }
-
-        #region Init
-
-        private void InitCanon()
-        {
-            _canon = GetComponentInParent<Canon>();
-        }
-
-        #endregion
 
         #region Tag Checks
 

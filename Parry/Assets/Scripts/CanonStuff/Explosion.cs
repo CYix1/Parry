@@ -9,20 +9,21 @@ public class Explosion : MonoBehaviour
 
     public void StartExplosion()
     {
-        StartCoroutine(nameof(OnExplode));
+        StartCoroutine(OnExplode(transform.position));
     }
-    
+
     private IEnumerator OnExplode(Vector3 pos, Quaternion? rotation = null)
     {
-        GameObject clone; 
+        GameObject clone;
         if (rotation == null)
         {
             clone = Instantiate(prefab, pos, standardRotation);
         }
         else
         {
-            clone = Instantiate(prefab, pos, (Quaternion)rotation);
+            clone = Instantiate(prefab, pos, (Quaternion) rotation);
         }
+
         yield return new WaitForSeconds(0.95f);
         Destroy(clone);
     }
