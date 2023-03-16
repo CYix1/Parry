@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Canon
   - Intermediate
+  - PlayerRB
   layers:
   - Default
   - TransparentFX

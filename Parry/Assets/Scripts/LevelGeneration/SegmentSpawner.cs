@@ -17,7 +17,7 @@ namespace LevelGeneration
         private System.Random _rand;
         
         //sry kerstin ich zerstöre dein script ups ~ Yixi
-                  
+        // alles gut xD
        
         
         [Header("Decoration Models")]
@@ -84,6 +84,7 @@ namespace LevelGeneration
             var spawnPos = GetSpawnPos(intermediatePlaceHolder.transform);
             _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
+            
             DecoratorDelegator del = _lastSegment.GetComponent<DecoratorDelegator>();
             
             //spawn house at the points
