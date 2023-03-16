@@ -637,7 +637,7 @@ MonoBehaviour:
   - {fileID: 1115172856311827357, guid: c9af95d7453be2a41988c85d49aabea6, type: 3}
   - {fileID: 8449218438702687693, guid: c48a1774de7673e4c9b357c91d009f81, type: 3}
   fistSegment: {fileID: 2695847513353331343, guid: 753783ad273584c4db71dd6c3fb81009, type: 3}
-  segmentSpeed: 0
+  segmentSpeed: 8
   intermediatePlaceHolder: {fileID: 2695847513353331343, guid: 753783ad273584c4db71dd6c3fb81009, type: 3}
   houses:
   - {fileID: 919132149155446097, guid: f5d96f06876cc334cab4253dfbd07bdd, type: 3}
