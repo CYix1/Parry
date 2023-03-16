@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 5385583561642232530}
   - component: {fileID: 5385583561642232531}
   m_Layer: 0
-  m_Name: Canon
+  m_Name: Canon R
   m_TagString: Canon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5385583561642232537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.50041, y: 0.50001, z: 0}
+  m_LocalPosition: {x: -20.50041, y: 0.50001, z: 0.25}
   m_LocalScale: {x: 0.07, y: 1, z: 0.11111112}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ea05f18fb03ea43aa3044dc6a28bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 0}
 --- !u!1 &8299416058838780732
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8299416058838780732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.5291, y: -0, z: 0.2768}
+  m_LocalPosition: {x: 13.529098, y: 0, z: -2.50005}
   m_LocalScale: {x: 26.057865, y: 1, z: 8.696154}
   m_ConstrainProportionsScale: 0
   m_Children: []
