@@ -8,7 +8,7 @@ namespace CanonStuff
     {
         private Canon _canon;
 
-        private void Awake()
+        private void Start()
         {
             _canon = GetComponentInParent<Canon>();
             Debug.Log("canon = " + _canon.name);

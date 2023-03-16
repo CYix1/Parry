@@ -16,7 +16,7 @@ public class MenuHandler : MonoBehaviour
 
     private void Start()
     {
-        GameData.instance.health = 300;
+        GameData.instance.health = 3;
         GameData.instance.coins = 0;
     }
     private void Update()
