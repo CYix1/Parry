@@ -12,7 +12,8 @@ public class EnemyFollow : MonoBehaviour
     void FixedUpdate() => setPos();
 
     void setPos()
-    {float new_distance = 1.5f * GameData.instance.health;
+    {
+        float new_distance = 1.5f * GameData.instance.health;
         transform.position = new Vector3(player.position.x+new_distance, player.position.y, player.position.z);
 
     }
