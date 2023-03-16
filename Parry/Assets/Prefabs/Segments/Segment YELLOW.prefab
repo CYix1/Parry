@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494162852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48353565, y: 1.16, z: -0.33334005}
+  m_LocalPosition: {x: -0.59800005, y: 1.16, z: -0.33334005}
   m_LocalScale: {x: 0.035514884, y: 2.2304876, z: 0.2522592}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 1105072425}
   - component: {fileID: 1105072424}
   - component: {fileID: 1105072423}
+  - component: {fileID: 8444924815040875070}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -194,6 +195,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8444924815040875070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105072422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ae86c3298640189f2e5a53f10c4750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1116961305
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116961305}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48353562, y: 1.16, z: 0.33428705}
+  m_LocalPosition: {x: -0.598, y: 1.16, z: 0.33428705}
   m_LocalScale: {x: 0.035514884, y: 2.2304876, z: 0.2522592}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -790,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5385583561642232533, guid: 071461f2289a9754ab5df30a278e6d41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.474
+      value: -0.58846444
       objectReference: {fileID: 0}
     - target: {fileID: 5385583561642232533, guid: 071461f2289a9754ab5df30a278e6d41, type: 3}
       propertyPath: m_LocalPosition.y
