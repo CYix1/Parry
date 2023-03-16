@@ -4799,6 +4799,10 @@ PrefabInstance:
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2795687726692235293, guid: f56f9293eb66c224b9736551ecaffff8, type: 3}
+      propertyPath: moveSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795687726692235293, guid: f56f9293eb66c224b9736551ecaffff8, type: 3}
       propertyPath: perrys.Array.size
       value: 3
       objectReference: {fileID: 0}

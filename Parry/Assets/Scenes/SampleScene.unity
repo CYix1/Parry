@@ -654,8 +654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6919f6835230f4eb48ff5cad1ad3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PerryModel: {fileID: 0}
-  dodgePerryModel: {fileID: 0}
+  perrys: []
+  activity: 0
   jumpStrength: 1
   moveSpeed: 5
 --- !u!54 &744907313
