@@ -10,13 +10,9 @@ namespace CanonStuff
     public class BulletDestroyable : MonoBehaviour
     {
         public GameObject prefab;
-        public Quaternion standardRotation = Quaternion.Euler(Vector3.left);
+        public Quaternion standardRotation = Quaternion.Euler(Vector3.up);
+        
 
-
-        private void Update()
-        {
-            StartCoroutine(OnExplode(transform.position));
-        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -28,6 +24,7 @@ namespace CanonStuff
             Destroy(other.gameObject);
             StartCoroutine(OnExplode(transform.position));
             Destroy(gameObject);
+            Destroy(this);
         }
         
         private IEnumerator OnExplode(Vector3 pos, Quaternion? rotation = null)
