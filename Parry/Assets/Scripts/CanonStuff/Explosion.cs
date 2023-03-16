@@ -9,9 +9,9 @@ namespace CanonStuff
         public Quaternion standardRotation = Quaternion.Euler(Vector3.forward);
 
 
-        public void StartExplosion()
+        public void StartExplosion(Vector3 pos)
         {
-            StartCoroutine(OnExplode(transform.position));
+            StartCoroutine(OnExplode(pos));
         }
 
         private IEnumerator OnExplode(Vector3 pos, Quaternion? rotation = null)

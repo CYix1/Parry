@@ -226,6 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 8937429384675987467, guid: 0fbbd70b3f937f84390be811d713982a, type: 3}
+  prefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  standardRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
 --- !u!1 &8299416058838780732
 GameObject:
   m_ObjectHideFlags: 0

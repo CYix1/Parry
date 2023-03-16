@@ -1,17 +1,21 @@
+
 using System;
 using LevelGeneration;
 using UnityEngine;
+using System.Collections;
 
 namespace CanonStuff
 {
     // object that can be destroyed by a bullet
     public class BulletDestroyable : MonoBehaviour
     {
-        [SerializeField] private Explosion explosion;
+        public GameObject prefab;
+        public Quaternion standardRotation = Quaternion.Euler(Vector3.left);
 
-        private void Start()
+
+        private void Update()
         {
-            explosion.gameObject.SetActive(true);
+            StartCoroutine(OnExplode(transform.position));
         }
 
         private void OnTriggerEnter(Collider other)
@@ -22,8 +26,24 @@ namespace CanonStuff
 
             // destroy both bullet and canon + play explosion
             Destroy(other.gameObject);
-            explosion.StartExplosion();
+            StartCoroutine(OnExplode(transform.position));
             Destroy(gameObject);
+        }
+        
+        private IEnumerator OnExplode(Vector3 pos, Quaternion? rotation = null)
+        {
+            GameObject clone;
+            if (rotation == null)
+            {
+                clone = Instantiate(prefab, pos, standardRotation);
+            }
+            else
+            {
+                clone = Instantiate(prefab, pos, (Quaternion) rotation);
+            }
+
+            yield return new WaitForSeconds(0.95f);
+            Destroy(clone);
         }
 
         #region Checks
