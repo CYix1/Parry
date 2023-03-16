@@ -42,8 +42,6 @@ public class AudioManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log(mode);
     }
 
     public void Play(string name)

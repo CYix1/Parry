@@ -1,23 +1,29 @@
+using System;
 using LevelGeneration;
 using UnityEngine;
 
 namespace CanonStuff
 {
-    // object can be destroyed by a bullet
+    // object that can be destroyed by a bullet
     public class BulletDestroyable : MonoBehaviour
     {
+        [SerializeField] private Explosion explosion;
+
+        private void Start()
+        {
+            explosion.gameObject.SetActive(true);
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             // only destroy on bullets that were deflected
             if (!IsBullet(other)) return;
             if (!WasDeflected(other)) return;
-            
-            // destroy both bullet and canon
-            Destroy(gameObject);
-            Destroy(other.gameObject);
-            
-            // TODO: start explosion
 
+            // destroy both bullet and canon + play explosion
+            Destroy(other.gameObject);
+            explosion.StartExplosion();
+            Destroy(gameObject);
         }
 
         #region Checks

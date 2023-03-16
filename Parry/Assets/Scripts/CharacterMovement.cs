@@ -1,21 +1,20 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject PerryModel;
-    [SerializeField] private GameObject dodgePerryModel;
+    [SerializeField] private GameObject[] perrys;
+    
 
-    enum Activity
+    public enum Activity
     {
-        RUNNING, JUMPING, DODGING
+        RUNNING, JUMPING, DODGING, JETPACK
     }
 
     private Rigidbody body;
-    private Activity activity;
+    public Activity activity;
     private float lanePos;
 
     [SerializeField] private float jumpStrength = 5f;
@@ -23,10 +22,11 @@ public class CharacterMovement : MonoBehaviour
 
     private readonly float minMovePos = -3f;
     private readonly float maxMovePos = 3f;
-
+    private float startPos ;
     private void Awake()
     {
         body = this.GetComponent<Rigidbody>();
+        startPos = transform.position.x;
     }
 
     private void FixedUpdate()
@@ -41,9 +41,11 @@ public class CharacterMovement : MonoBehaviour
             {
                 newPos = 0;
             }
-            transform.position = new Vector3(transform.position.x, transform.position.y, newPos);
+            transform.position = new Vector3(startPos, transform.position.y, newPos);
         }
     }
+
+    
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -84,14 +86,22 @@ public class CharacterMovement : MonoBehaviour
 
     IEnumerator DodgeEnumerator()
     {
+        
         activity = Activity.DODGING;
         transform.localScale = new Vector3(1f, 0.5f, 1f); 
-        PerryModel.SetActive(false);
-        dodgePerryModel.SetActive(true);
+        foreach (var parry in perrys)
+        {
+            parry.SetActive(false);
+        }
+        perrys[1].SetActive(true);
         yield return new WaitForSecondsRealtime(1f);
         transform.localScale = new Vector3(1f, 1f, 1f);
-        PerryModel.SetActive(true);
-        dodgePerryModel.SetActive(false);
+        foreach (var parry in perrys)
+        {
+            parry.SetActive(false);
+        }
+        perrys[0].SetActive(true);
+
         activity = Activity.RUNNING;
     }
 }

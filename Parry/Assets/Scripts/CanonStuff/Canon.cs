@@ -2,36 +2,33 @@ using LevelGeneration;
 using UnityEngine;
 
 // fires a bullet every "shotInterval"
-public class Canon : MonoBehaviour
+namespace CanonStuff
 {
-    [SerializeField] private float shotInterval = 1f;
-    [SerializeField] private float shotSpeed = 10f;
-    [SerializeField] private Transform bullet;
-
-    private Vector3 _spawnPos;
-
-    private void Start()
+    public class Canon : MonoBehaviour
     {
-        // spawn bullet at canons pos
-        _spawnPos = transform.position;
-    }
+        [SerializeField] private float shotInterval = 1f;
+        [SerializeField] private float shotSpeed = 10f;
+        [SerializeField] private Transform bullet;
 
-    public void StartShooting()
-    {
-        // calls Shoot every shotInterval
-        InvokeRepeating(nameof(Shoot), 0, shotInterval);
-    }
-    public void StopShooting()
-    {
-        // stop shooting if player has passed
-        // CancelInvoke() stops all invoke calls on the gameObject
-        CancelInvoke();
-    }
 
-    private void Shoot()
-    {
-        var bulletGo = Instantiate(bullet, _spawnPos, Quaternion.identity);
-        var movObjComponent = bulletGo.GetComponent<MovingObject>();
-        movObjComponent.SetSpeed(shotSpeed);
+        public void StartShooting()
+        {
+            // calls Shoot every shotInterval
+            InvokeRepeating(nameof(Shoot), 0, shotInterval);
+        }
+
+        public void StopShooting()
+        {
+            // stop shooting if player has passed
+            // CancelInvoke() stops all invoke calls on the gameObject
+            CancelInvoke();
+        }
+
+        private void Shoot()
+        {
+            var bulletGo = Instantiate(bullet, transform.position, Quaternion.identity);
+            var movObjComponent = bulletGo.GetComponent<MovingObject>();
+            movObjComponent.SetSpeed(shotSpeed);
+        }
     }
 }

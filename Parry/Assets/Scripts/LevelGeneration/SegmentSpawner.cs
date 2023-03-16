@@ -1,19 +1,29 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace LevelGeneration
 {
     public class SegmentSpawner : MonoBehaviour
     {
-        [Header("Spawning")] [SerializeField] private Transform spawnPoint;
-        [SerializeField] private int firstGroupCount = 3;
-        [Header("Segments")] [SerializeField] private List<MovingObject> segments = new();
-        [SerializeField] private MovingObject fistSegment;
-        [SerializeField] private float segmentSpeed = 10f;
-        [SerializeField] private MovingObject intermediatePlaceHolder;
+        [Header("Spawning")] 
+        [SerializeField] private Transform spawnPoint;
+        [SerializeField] private float segmentSpeed = 8f;
+        [SerializeField] private int firstGroupCount = 10;
+        
+        [Header("Segments")]
+        [SerializeField] private MovingObject firstSegment;
+        [SerializeField] private List<MovingObject> segments = new();
+        [SerializeField] private List<MovingObject> intermediates = new();
 
-        private Transform _lastSegment;
+        [Header("Decoration Models")]
+        public GameObject[] houses;
+        public GameObject[] trees;
+        public GameObject[] undergrounds;
+
         private System.Random _rand;
+        private Transform _lastSegment;
+   
 
         #region Start
 
@@ -35,7 +45,7 @@ namespace LevelGeneration
 
         private void SpawnFirst()
         {
-            SpawnSegment(fistSegment);
+            SpawnSegment(firstSegment);
             for (int i = 0; i < firstGroupCount; i++)
             {
                 SpawnRandomSegment();
@@ -44,7 +54,7 @@ namespace LevelGeneration
 
         private void SpawnRandomSegment()
         {
-            int randomIndex = GetRandomIndex();
+            int randomIndex = GetRandomSegmentIndex();
             MovingObject segment = segments[randomIndex];
 
             SpawnSegment(segment);
@@ -55,15 +65,54 @@ namespace LevelGeneration
             var spawnPos = GetSpawnPos(segment.transform);
             _lastSegment = Instantiate(segment.transform, spawnPos, Quaternion.identity);
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
+           
+          
 
-            SpawnIntermediate();
+            SpawnRandomIntermediateAndDeco();
         }
 
-        private void SpawnIntermediate()
+        public GameObject RandomHouse() => houses[Random.Range(0, houses.Length)];
+        public GameObject RandomTree() => trees[Random.Range(0, trees.Length)];
+        public GameObject RandomUnderground() => undergrounds[Random.Range(0, undergrounds.Length)];
+
+
+        private void SpawnRandomIntermediateAndDeco()
         {
-            var spawnPos = GetSpawnPos(intermediatePlaceHolder.transform);
-            _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
+            var randomIndex = GetRandomIntermediateIndex();
+            MovingObject intermediate = intermediates[randomIndex];
+            
+            var spawnPos = GetSpawnPos(intermediate.transform);
+            _lastSegment = Instantiate(intermediate.transform, spawnPos, Quaternion.identity);
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
+            
+            DecoratorDelegator del = _lastSegment.GetComponentInChildren<DecoratorDelegator>();
+            //spawn house at the points
+            var temp=Instantiate(RandomHouse().transform, del.housSPLeft.position, del.housSPLeft.rotation, _lastSegment.transform);
+            temp.transform.localScale = del.housSPLeft.localScale;
+            
+            temp=Instantiate(RandomHouse().transform, del.housSPRight.position,  del.housSPRight.rotation, _lastSegment.transform);
+            temp.transform.localScale = del.housSPRight.localScale;
+
+            //maybe spawn something
+            if (Random.value > 0.4f)
+            {
+                //left trees
+                for (int i = 0; i < del.TreeSPLeft.Length; i++)
+                {
+                    temp= Instantiate(RandomTree().transform, del.TreeSPLeft[i].position, Quaternion.identity,
+                        _lastSegment.transform);
+                    temp.transform.localScale = del.TreeSPLeft[i].localScale;
+                }
+
+                //right trees
+                for (int i = 0; i < del.TreeSPRight.Length; i++)
+                {
+                    temp=  Instantiate(RandomTree().transform, del.TreeSPRight[i].position, Quaternion.identity,
+                        _lastSegment.transform);
+                    temp.transform.localScale = del.TreeSPRight[i].localScale;
+                }
+            }
+
         }
 
         #endregion
@@ -80,11 +129,16 @@ namespace LevelGeneration
 
         #region Helpers
 
-        private int GetRandomIndex()
+        private int GetRandomSegmentIndex()
         {
             // segments.Count as it is used to get a random segment from the list
             // Next(x) returns a random value in [0,x[
             return _rand.Next(segments.Count);
+        }
+        private int GetRandomIntermediateIndex()
+        {
+            // ->  see GetRandomSegmentIndex()
+            return _rand.Next(intermediates.Count);
         }
 
         private Vector3 GetSpawnPos(Transform newSegment)

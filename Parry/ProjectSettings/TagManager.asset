@@ -9,11 +9,12 @@ TagManager:
   - Bullet
   - Canon
   - Intermediate
+  - PlayerRB
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PP
   - Water
   - UI
   - 

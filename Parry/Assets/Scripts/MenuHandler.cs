@@ -17,6 +17,7 @@ public class MenuHandler : MonoBehaviour
     private void Start()
     {
         GameData.instance.health = 3;
+        GameData.instance.coins = 0;
     }
     private void Update()
     {
@@ -31,7 +32,6 @@ public class MenuHandler : MonoBehaviour
     {
         triggerOptionPanel();
         Time.timeScale = optionPanel.activeSelf ? 0 : 1;
-        Debug.Log("RESUME");
     }
 
     public void SetMasterVolume(float sliderValue) => SetLevel("MasterVolume", sliderValue);
