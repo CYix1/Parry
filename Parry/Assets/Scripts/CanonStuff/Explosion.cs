@@ -11,7 +11,6 @@ namespace CanonStuff
 
         public void StartExplosion()
         {
-            gameObject.SetActive(true);
             StartCoroutine(OnExplode(transform.position));
         }
 

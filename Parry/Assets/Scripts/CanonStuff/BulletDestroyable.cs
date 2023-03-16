@@ -1,3 +1,4 @@
+using System;
 using LevelGeneration;
 using UnityEngine;
 
@@ -8,17 +9,21 @@ namespace CanonStuff
     {
         [SerializeField] private Explosion explosion;
 
+        private void Start()
+        {
+            explosion.gameObject.SetActive(true);
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             // only destroy on bullets that were deflected
             if (!IsBullet(other)) return;
             if (!WasDeflected(other)) return;
 
-            // destroy both bullet and canon
-            Destroy(gameObject);
+            // destroy both bullet and canon + play explosion
             Destroy(other.gameObject);
-
             explosion.StartExplosion();
+            Destroy(gameObject);
         }
 
         #region Checks
