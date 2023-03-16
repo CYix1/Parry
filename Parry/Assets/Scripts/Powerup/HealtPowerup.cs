@@ -8,7 +8,8 @@ public class HealtPowerup :MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameData.instance.health += 2;
-
+            Debug.Log("Add Health");
+            Destroy(gameObject);
         }
     }
 }
