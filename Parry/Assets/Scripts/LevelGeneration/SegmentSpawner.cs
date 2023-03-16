@@ -85,8 +85,8 @@ namespace LevelGeneration
             _lastSegment = Instantiate(intermediatePlaceHolder.transform, spawnPos, Quaternion.identity);
             _lastSegment.GetComponent<MovingObject>().SetSpeed(segmentSpeed);
             
-            DecoratorDelegator del = _lastSegment.GetComponent<DecoratorDelegator>();
-            
+            DecoratorDelegator del = _lastSegment.GetComponentInChildren<DecoratorDelegator>();
+            Debug.Log(del);
             //spawn house at the points
             var temp=Instantiate(RandomHouse().transform, del.housSPLeft.position, del.housSPLeft.rotation, _lastSegment.transform);
             temp.transform.localScale = del.housSPLeft.localScale;
@@ -113,11 +113,6 @@ namespace LevelGeneration
                     temp.transform.localScale = del.TreeSPRight[i].localScale;
                 }
             }
-
-            temp=  Instantiate(RandomUnderground().transform, del.underGroundSP.position, del.underGroundSP.rotation,
-                _lastSegment.transform);
-            temp.transform.localScale = del.underGroundSP.localScale;
-
 
         }
 
