@@ -1,6 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class JetpackPowerup : MonoBehaviour
@@ -13,14 +12,20 @@ public class JetpackPowerup : MonoBehaviour
     private float _speed = 10f;
     private bool _active = false;
 
-    public void OnCollisionEnter()
+    private void OnCollisionEnter(Collision collision)
     {
-        SetActive();
-        powerUp.SetActive(false);
-        _active = true;
-        player.GetComponent<Rigidbody>().useGravity = false;
+        if (collision.gameObject.CompareTag("Player")&&!_active)
+        {
+            SetActive();
+            powerUp.SetActive(false);
+            _active = true;
+            player.GetComponent<Rigidbody>().useGravity = false;
+            timer = 10f;
+            Debug.Log("dao");
+        }
     }
-    
+
+
     void Update()
     {
         if (timer <= 0)
@@ -38,7 +43,12 @@ public class JetpackPowerup : MonoBehaviour
     public void Move(bool up)
     {
         var pos = player.transform.position;
-        if (up) player.transform.position = new Vector3(pos.x, pos.y + _speed * Time.deltaTime, pos.z);
+        if (up)
+        {
+            if (player.transform.position.y >= _maxheight) return;
+            player.transform.position = new Vector3(pos.x, pos.y + _speed * Time.deltaTime, pos.z);
+            
+        }
         else player.transform.position = new Vector3(pos.x, pos.y + -(_speed * Time.deltaTime), pos.z);
     }
     public void SetActive()
@@ -48,10 +58,17 @@ public class JetpackPowerup : MonoBehaviour
             parry.SetActive(false);
         }
         parries[2].SetActive(true);
+        player.GetComponent<CharacterMovement>().activity = CharacterMovement.Activity.JETPACK;
+
     }
     public void SetInactive()
     {
-        parries[2].SetActive(false);
-        parries[1].SetActive(true);
+        foreach (var parry in parries)
+        {
+            parry.SetActive(false);
+        }
+        parries[0].SetActive(true);
+        player.GetComponent<CharacterMovement>().activity = CharacterMovement.Activity.RUNNING;
+        Destroy(gameObject);
     }
 }
