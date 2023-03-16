@@ -6,7 +6,13 @@ public class Explosion : MonoBehaviour
     public GameObject prefab;
     public Quaternion standardRotation = Quaternion.Euler(Vector3.forward);
 
-    IEnumerator OnExplode(Vector3 pos, Quaternion? rotation = null)
+
+    public void StartExplosion()
+    {
+        StartCoroutine(nameof(OnExplode));
+    }
+    
+    private IEnumerator OnExplode(Vector3 pos, Quaternion? rotation = null)
     {
         GameObject clone; 
         if (rotation == null)
