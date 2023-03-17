@@ -26,6 +26,7 @@ public class JetpackPowerup : MonoBehaviour
                 Destroy(VARIABLE);
             }
 
+            GetComponent<BoxCollider>().enabled=false;
             timer = 5;
         }
     }
