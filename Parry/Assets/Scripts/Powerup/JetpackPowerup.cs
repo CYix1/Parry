@@ -9,7 +9,7 @@ public class JetpackPowerup : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject powerUp;
     [SerializeField] private float _maxheight = 5.0f;
-    [SerializeField] private float timer = 10.0f;
+    [SerializeField] private float timer = 5f;
     private float _speed = 10f;
     private bool _active = false;
 
@@ -26,7 +26,7 @@ public class JetpackPowerup : MonoBehaviour
                 Destroy(VARIABLE);
             }
 
-            timer = 10f;
+            timer = 5;
         }
     }
 
@@ -45,7 +45,6 @@ public class JetpackPowerup : MonoBehaviour
         {
             if(player.transform.position.y <= _maxheight) Move(true);
             timer -= Time.deltaTime;
-            Debug.Log(timer +" |"+ _active);
         }
     }
     public void Move(bool up)
