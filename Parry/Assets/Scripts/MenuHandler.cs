@@ -59,7 +59,7 @@ public class MenuHandler : MonoBehaviour
         }
         AudioManager.instance.mixer.SetFloat(select, Mathf.Log10(sliderValue) * 20);
 
-        Debug.Log("set" + select + " v " + sliderValue);
+//        Debug.Log("set" + select + " v " + sliderValue);
         switch (select)
         {
             case "effectVolume":
