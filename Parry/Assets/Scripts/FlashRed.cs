@@ -9,12 +9,15 @@ public class FlashRed : MonoBehaviour
 
     private MeshRenderer _meshRenderer;
     private List<Color> _originalColors;
+    private bool _isFlashing;
 
     void Start()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
         _originalColors = new List<Color>();
-        
+        _isFlashing = false;
+
+
         AssignOriginalColors();
     }
 
@@ -25,6 +28,8 @@ public class FlashRed : MonoBehaviour
 
     private IEnumerator FlashCoroutine()
     {
+        _isFlashing = true;
+
         for (int i = 0; i < numberOfFlashes; i++)
         {
             // switch between red and white in certain interval
@@ -37,6 +42,8 @@ public class FlashRed : MonoBehaviour
 
         // switch back to original color
         ResetColor();
+
+        _isFlashing = false;
     }
 
     private void AssignOriginalColors()
