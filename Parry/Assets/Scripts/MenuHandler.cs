@@ -14,8 +14,12 @@ public class MenuHandler : MonoBehaviour
         input = new MainInput();
     }
 
-    private void Start()
+    private void Start()    
     {
+        
+        Application.targetFrameRate = 50;
+        
+        QualitySettings.vSyncCount = 0;
         GameData.instance.health = 100;
         GameData.instance.coins = 0;
     }
