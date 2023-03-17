@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1299,14 +1299,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.90588236}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9e881ad58d4b77438d31dc9ffc0a3ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1825,93 +1825,57 @@ MonoBehaviour:
   sounds:
   - clip: {fileID: 8300000, guid: 2fbdd2e53eb17ee4a9c77f2e129182b9, type: 3}
     name: 0
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: a38419f13a881494b93af80a59ac0436, type: 3}
     name: 1
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 47ee6863ddf6b754890e1f472c0c548d, type: 3}
     name: 2
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 2d87acb8a3c35d042a31b3668899e74d, type: 3}
     name: 3
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: f222302807952d24ba9025ec98090d03, type: 3}
     name: 4
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 1f100664ab9503f4d97075ec4ca5a32c, type: 3}
     name: 5
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: b09cafeb163fcad489c7261dd83a7a42, type: 3}
     name: 6
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: b09cafeb163fcad489c7261dd83a7a42, type: 3}
     name: 7
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 69753affcac2ce8408ee65638288ea0a, type: 3}
     name: 8
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 492b576ed1cbb0745b7ec07c76415b6c, type: 3}
     name: 9
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 7851fe85109d39742b74af6e6b6ffc94, type: 3}
     name: 10
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 6b8dceea5fa256b4eb864372c70f95be, type: 3}
     name: 11
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: b7af51d3546b833489a6bb3f534d93ec, type: 3}
     name: 12
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 35156fdb546702a468fc90a7e73b34ee, type: 3}
     name: 13
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 93253bb55c4059b4f9c88a8faf69d886, type: 3}
     name: 14
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 23a9a0027a1900c4bb65ae1b55ce7ceb, type: 3}
     name: 15
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: bbdc7bb6e2987c449940dd0c39fc7359, type: 3}
     name: 16
-    volume: 1
-    pitch: 1
     loop: 0
   - clip: {fileID: 8300000, guid: 0c264553331a6f54684889ef53f4757c, type: 3}
     name: 17
-    volume: 1
-    pitch: 1
     loop: 0
   _source: {fileID: 1076193515}
   mixer: {fileID: 24100000, guid: afdb4a3b892323d4480d84c0adea2c31, type: 2}

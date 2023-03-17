@@ -24,6 +24,9 @@ public class JetpackPowerup : MonoBehaviour
             foreach (var VARIABLE in gameObject.GetComponentsInChildren<MovingObject>())
             {
                 Destroy(VARIABLE);
+            }foreach (var VARIABLE in gameObject.GetComponentsInChildren<Renderer>())
+            {
+                VARIABLE.enabled = false;
             }
 
             GetComponent<BoxCollider>().enabled=false;
