@@ -12,7 +12,7 @@ public class ShieldPowerup: MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             var new_pos = player.transform.position;
-            new_pos += new Vector3(-4, 0, 0);
+            new_pos += new Vector3(-2, 0, 0);
             var new_pw=Instantiate(shield.transform, new_pos,Quaternion.identity,player.transform);
             new_pw.gameObject.SetActive(true);
             Destroy(new_pw.GetComponent<MovingObject>());

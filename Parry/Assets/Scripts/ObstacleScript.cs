@@ -10,6 +10,7 @@ public class ObstacleScript : MonoBehaviour
 
     private MeshRenderer _meshRenderer;
     private List<Color> _originalColors;
+    private bool _isFlashing;
 
     private const int NormalPerryIndex = 0;
     private const int DodgePerryIndex = 1;
@@ -18,6 +19,7 @@ public class ObstacleScript : MonoBehaviour
     private void Start()
     {
         _originalColors = new();
+        _isFlashing = false;
 
         AssignCorrectMeshRendererAndColor();
     }
@@ -49,6 +51,8 @@ public class ObstacleScript : MonoBehaviour
 
     private IEnumerator FlashRed()
     {
+        _isFlashing = true;
+        
         for (int i = 0; i < numberOfFlashes; i++)
         {
             // switch between red and white in certain interval
@@ -62,6 +66,7 @@ public class ObstacleScript : MonoBehaviour
         // switch back to original color
         ResetColor();
         // tell PlayHitAnimation() that it can call coroutine again from now on
+        _isFlashing = true;
     }
 
     #endregion
