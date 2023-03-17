@@ -23,6 +23,8 @@ namespace CanonStuff
             // destroy both bullet and canon + play explosion
             Destroy(other.gameObject);
             StartCoroutine(OnExplode(transform.position));
+            
+           // AudioManager.instance.Play("CURSEYOU");
             Destroy(gameObject);
         }
         

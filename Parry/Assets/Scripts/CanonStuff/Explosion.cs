@@ -17,6 +17,7 @@ namespace CanonStuff
         private IEnumerator OnExplode(Vector3 pos, Quaternion? rotation = null)
         {
             GameObject clone;
+
             if (rotation == null)
             {
                 clone = Instantiate(prefab, pos, standardRotation);

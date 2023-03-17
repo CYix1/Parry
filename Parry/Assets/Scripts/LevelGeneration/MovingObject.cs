@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace LevelGeneration
@@ -17,13 +18,24 @@ namespace LevelGeneration
             // move object each frame by speed in x direction
             var newPos = GetNewXPos();
             transform.position = new Vector3(newPos, pos.y, pos.z);
+            if (transform.position.x > 20)
+            {
+                DestroyImmediate(gameObject);
+            }
+        }
+
+        private void OnBecameInvisible()
+        {
+            Destroy(gameObject);
         }
 
         private float GetNewXPos()
         {
             var xPos = transform.position.x;
             var speed = _reversed ? -_speed : _speed;
+            
             return xPos + speed * Time.deltaTime;
+            
         }
 
         public void ReverseDirection()

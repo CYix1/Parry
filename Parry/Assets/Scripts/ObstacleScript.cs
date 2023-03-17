@@ -66,7 +66,7 @@ public class ObstacleScript : MonoBehaviour
         // switch back to original color
         ResetColor();
         // tell PlayHitAnimation() that it can call coroutine again from now on
-        _isFlashing = true;
+        _isFlashing = false;
     }
 
     #endregion

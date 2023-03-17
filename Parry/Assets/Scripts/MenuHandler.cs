@@ -22,6 +22,11 @@ public class MenuHandler : MonoBehaviour
         QualitySettings.vSyncCount = 0;
         GameData.instance.health = 100;
         GameData.instance.coins = 0;
+        var s=        optionPanel.GetComponentsInChildren<Slider>();
+        SetMasterVolume(s[0].value);
+        SetEffectVolume(s[1].value);
+        SetBackgroundVolume(s[2].value);
+
     }
     private void Update()
     {
@@ -53,6 +58,8 @@ public class MenuHandler : MonoBehaviour
             AudioManager.instance.masterVolume = sliderValue;
         }
         AudioManager.instance.mixer.SetFloat(select, Mathf.Log10(sliderValue) * 20);
+
+        Debug.Log("set" + select + " v " + sliderValue);
         switch (select)
         {
             case "effectVolume":

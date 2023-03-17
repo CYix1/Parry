@@ -5,7 +5,7 @@ namespace Powerup
 {
     public class Deflect : MonoBehaviour
     {
-        private uint _numberOfDeflects = 3;
+        public  int _numberOfDeflects = 3;
         private FlashRed _flasher;
 
         private void Start()

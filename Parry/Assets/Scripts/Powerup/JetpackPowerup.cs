@@ -1,5 +1,6 @@
+using System;
 using System.Collections.Generic;
-
+using LevelGeneration;
 using UnityEngine;
 
 public class JetpackPowerup : MonoBehaviour
@@ -20,10 +21,16 @@ public class JetpackPowerup : MonoBehaviour
             powerUp.SetActive(false);
             _active = true;
             player.GetComponent<Rigidbody>().useGravity = false;
+            //Destroy(powerUp.GetComponent<MovingObject>());
+
             timer = 10f;
         }
     }
 
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 
     void Update()
     {
@@ -68,6 +75,8 @@ public class JetpackPowerup : MonoBehaviour
         }
         parries[0].SetActive(true);
         player.GetComponent<CharacterMovement>().activity = CharacterMovement.Activity.RUNNING;
+        
         Destroy(gameObject);
+        
     }
 }
