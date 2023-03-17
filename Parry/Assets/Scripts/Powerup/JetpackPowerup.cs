@@ -21,19 +21,20 @@ public class JetpackPowerup : MonoBehaviour
             powerUp.SetActive(false);
             _active = true;
             player.GetComponent<Rigidbody>().useGravity = false;
-            //Destroy(powerUp.GetComponent<MovingObject>());
+            foreach (var VARIABLE in gameObject.GetComponentsInChildren<MovingObject>())
+            {
+                Destroy(VARIABLE);
+            }
 
             timer = 10f;
         }
     }
 
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
+   
 
     void Update()
     {
+        
         if (timer <= 0)
         {
             _active = false;
@@ -44,6 +45,7 @@ public class JetpackPowerup : MonoBehaviour
         {
             if(player.transform.position.y <= _maxheight) Move(true);
             timer -= Time.deltaTime;
+            Debug.Log(timer +" |"+ _active);
         }
     }
     public void Move(bool up)
