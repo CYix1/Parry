@@ -8,7 +8,7 @@ namespace LevelGeneration
     public class MovingObject : MonoBehaviour
     {
         // can be set by the instantiated object
-        private float _speed = 10f;
+        private float _speed = 6f;
         private bool _reversed;
         
         void Update()
@@ -18,6 +18,7 @@ namespace LevelGeneration
             // move object each frame by speed in x direction
             var newPos = GetNewXPos();
             transform.position = new Vector3(newPos, pos.y, pos.z);
+            
             if (transform.position.x > 20)
             {
                 DestroyImmediate(gameObject);

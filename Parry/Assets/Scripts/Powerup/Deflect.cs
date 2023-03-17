@@ -5,7 +5,7 @@ namespace Powerup
 {
     public class Deflect : MonoBehaviour
     {
-        public  int _numberOfDeflects = 3;
+        public int numberOfDeflects = 3;
         private FlashRed _flasher;
 
         private void Start()
@@ -16,7 +16,7 @@ namespace Powerup
         private void OnTriggerEnter(Collider other)
         {
             if (!CanBeDeflected(other)) return;
-            
+
             // handle bullet
             var moveComponent = other.GetComponent<MovingObject>();
             Debug.Log(moveComponent);
@@ -24,8 +24,8 @@ namespace Powerup
 
             // handle shield
             _flasher.Flash();
-            _numberOfDeflects--;
-            if (_numberOfDeflects <= 0) Destroy(gameObject);
+            numberOfDeflects--;
+            if (numberOfDeflects <= 0) Destroy(gameObject);
         }
 
         private bool CanBeDeflected(Collider other)
