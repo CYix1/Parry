@@ -160,7 +160,7 @@ MonoBehaviour:
   - {fileID: 1651186943}
   - {fileID: 759378082}
   - {fileID: 764771922}
-  spawnintervall: 1
+  spawnintervall: 5
   timer: 0
 --- !u!4 &50943845
 Transform:
@@ -5070,7 +5070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d742ec1e9bcb45a78f448da82182e161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numberOfDeflects: 3
+  numberOfDeflects: 3
 --- !u!114 &1651186950
 MonoBehaviour:
   m_ObjectHideFlags: 0

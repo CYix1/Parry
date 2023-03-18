@@ -20,7 +20,7 @@ public class MenuHandler : MonoBehaviour
         Application.targetFrameRate = 50;
         
         QualitySettings.vSyncCount = 0;
-        GameData.instance.health = 100;
+        GameData.instance.health = 20;
         GameData.instance.coins = 0;
         var s=        optionPanel.GetComponentsInChildren<Slider>();
         SetMasterVolume(s[0].value);
